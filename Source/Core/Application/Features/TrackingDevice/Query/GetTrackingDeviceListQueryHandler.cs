@@ -1,12 +1,13 @@
-﻿using AutoMapper;
+﻿using Application.Features.Devices.Query;
+using AutoMapper;
+using Domain.Entities;
 using MediatR;
 using System.Collections.Generic;
 using System.Threading;
 using System.Threading.Tasks;
-using Application.Contracts.Persisitance;
-using Domain.Entities;
+using Application.Contracts.Repositories;
 
-namespace VTS.Application.Features.TrackingDevices.Query
+namespace Application.Features.TrackingDevices.Query
 {
     public class GetTrackingDeviceListQueryHandler : IRequestHandler<GetTrackingDeviceListQery, List<TrackingDeviceVM>>
 
@@ -20,7 +21,8 @@ namespace VTS.Application.Features.TrackingDevices.Query
             _repository = repository;
         }
 
-        public async Task<List<TrackingDeviceVM>> Handle(GetTrackingDeviceListQery request, CancellationToken cancellationToken)
+        public async Task<List<TrackingDeviceVM>> Handle(GetTrackingDeviceListQery request,
+            CancellationToken cancellationToken)
         {
             var allTrackingDevice = await _repository.ListAllAsync();
             return _mapper.Map<List<TrackingDeviceVM>>(allTrackingDevice);

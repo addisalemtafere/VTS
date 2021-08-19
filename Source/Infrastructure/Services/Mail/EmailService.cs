@@ -1,18 +1,16 @@
-﻿using Microsoft.Extensions.Options;
+﻿using Application.Contracts.Infrastructure;
+using Application.Models.Email;
+using Microsoft.Extensions.Options;
 using SendGrid;
 using SendGrid.Helpers.Mail;
-using System;
-using System.Collections.Generic;
-using System.Text;
 using System.Threading.Tasks;
-using VTS.Application.Contracts.Infrastructure;
-using VTS.Application.Models.Email;
 
-namespace VTS.Infrastructure.Mail
+namespace Infrastructure.Mail
 {
-   public class EmailService : IEmailService
+    public class EmailService : IEmailService
     {
         public EmailSettings _emailSettings;
+
         public EmailService(IOptions<EmailSettings> mailSettings)
         {
             _emailSettings = mailSettings.Value;
@@ -32,12 +30,9 @@ namespace VTS.Infrastructure.Mail
             var sendGridMessage = MailHelper.CreateSingleEmail(from, to, subject, emailBody, emailBody);
             var respose = await client.SendEmailAsync(sendGridMessage);
 
-            if (respose.StatusCode == System.Net.HttpStatusCode.Accepted || respose.StatusCode == System.Net.HttpStatusCode.OK)
-            {
-                return true;
-            }
+            if (respose.StatusCode == System.Net.HttpStatusCode.Accepted ||
+                respose.StatusCode == System.Net.HttpStatusCode.OK) return true;
             return false;
-
         }
     }
 }

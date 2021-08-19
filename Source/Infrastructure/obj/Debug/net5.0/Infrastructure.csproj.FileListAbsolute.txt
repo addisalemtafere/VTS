@@ -10,3 +10,11 @@ D:\projects\seven-peek\Final\SevenPeaks.VehicleTrackingSystem\Source\Infrastruct
 D:\projects\seven-peek\Final\SevenPeaks.VehicleTrackingSystem\Source\Infrastructure\obj\Debug\net5.0\Infrastructure.dll
 D:\projects\seven-peek\Final\SevenPeaks.VehicleTrackingSystem\Source\Infrastructure\obj\Debug\net5.0\ref\Infrastructure.dll
 D:\projects\seven-peek\Final\SevenPeaks.VehicleTrackingSystem\Source\Infrastructure\obj\Debug\net5.0\Infrastructure.pdb
+D:\projects\seven-peek\Final\SevenPeaks.VehicleTrackingSystem\Source\Infrastructure\bin\Debug\net5.0\Infrastructure.runtimeconfig.json
+D:\projects\seven-peek\Final\SevenPeaks.VehicleTrackingSystem\Source\Infrastructure\bin\Debug\net5.0\Infrastructure.runtimeconfig.dev.json
+D:\projects\seven-peek\Final\SevenPeaks.VehicleTrackingSystem\Source\Infrastructure\bin\Debug\net5.0\Application.dll
+D:\projects\seven-peek\Final\SevenPeaks.VehicleTrackingSystem\Source\Infrastructure\bin\Debug\net5.0\Domain.dll
+D:\projects\seven-peek\Final\SevenPeaks.VehicleTrackingSystem\Source\Infrastructure\bin\Debug\net5.0\Application.pdb
+D:\projects\seven-peek\Final\SevenPeaks.VehicleTrackingSystem\Source\Infrastructure\bin\Debug\net5.0\Domain.pdb
+D:\projects\seven-peek\Final\SevenPeaks.VehicleTrackingSystem\Source\Infrastructure\obj\Debug\net5.0\Infrastructure.csproj.CopyComplete
+D:\projects\seven-peek\Final\SevenPeaks.VehicleTrackingSystem\Source\Infrastructure\obj\Debug\net5.0\Infrastructure.genruntimeconfig.cache

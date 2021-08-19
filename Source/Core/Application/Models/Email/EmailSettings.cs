@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace VTS.Application.Models.Email
+﻿namespace Application.Models.Email
 {
     public class EmailSettings
     {

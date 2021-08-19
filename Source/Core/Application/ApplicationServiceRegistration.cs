@@ -2,7 +2,7 @@
 using Microsoft.Extensions.DependencyInjection;
 using System.Reflection;
 
-namespace VTS.Application
+namespace Application
 {
     public static class ApplicationServiceRegistration
     {

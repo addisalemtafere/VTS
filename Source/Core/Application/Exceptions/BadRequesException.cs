@@ -1,14 +1,11 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace Application.Exceptions
 {
-    public class BadRequesException : ApplicationException
+    public class BadRequestException : ApplicationException
     {
-        public BadRequesException(string message) : base(message)
+        public BadRequestException(string message) : base(message)
         {
-
         }
     }
 }

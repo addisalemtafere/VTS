@@ -10,3 +10,6 @@ D:\projects\seven-peek\Final\SevenPeaks.VehicleTrackingSystem\Source\Core\Applic
 D:\projects\seven-peek\Final\SevenPeaks.VehicleTrackingSystem\Source\Core\Application\obj\Debug\net5.0\Application.dll
 D:\projects\seven-peek\Final\SevenPeaks.VehicleTrackingSystem\Source\Core\Application\obj\Debug\net5.0\ref\Application.dll
 D:\projects\seven-peek\Final\SevenPeaks.VehicleTrackingSystem\Source\Core\Application\obj\Debug\net5.0\Application.pdb
+D:\projects\seven-peek\Final\SevenPeaks.VehicleTrackingSystem\Source\Core\Application\bin\Debug\net5.0\Domain.dll
+D:\projects\seven-peek\Final\SevenPeaks.VehicleTrackingSystem\Source\Core\Application\bin\Debug\net5.0\Domain.pdb
+D:\projects\seven-peek\Final\SevenPeaks.VehicleTrackingSystem\Source\Core\Application\obj\Debug\net5.0\Application.csproj.CopyComplete

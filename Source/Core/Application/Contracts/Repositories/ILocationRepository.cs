@@ -1,7 +1,6 @@
-﻿
-using Domain.Entities;
+﻿using Domain.Entities;
 
-namespace Application.Contracts.Persisitance
+namespace Application.Contracts.Repositories
 {
     public interface ILocationRepository : IRepository<Location>
     {

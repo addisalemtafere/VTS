@@ -1,8 +1,9 @@
-﻿using System;
+﻿using Domain.Common;
+using System;
 
 namespace Domain.Entities
 {
-    public class Location
+    public class Location : AuditableEntity
     {
         public int Id { get; set; }
         public double Latitude { get; set; }

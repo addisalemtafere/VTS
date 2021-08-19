@@ -1,8 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using Application.Models.Email;
 using System.Threading.Tasks;
-using Application.Models.Email;
 
 namespace Application.Contracts.Infrastructure
 {

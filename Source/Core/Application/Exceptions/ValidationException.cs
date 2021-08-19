@@ -1,7 +1,6 @@
 ﻿using FluentValidation.Results;
 using System;
 using System.Collections.Generic;
-using System.Text;
 
 namespace Application.Exceptions
 {
@@ -12,10 +11,7 @@ namespace Application.Exceptions
         public ValidationException(ValidationResult validationResult)
         {
             ValidationErrors = new List<string>();
-            foreach (var validation in validationResult.Errors)
-            {
-                ValidationErrors.Add(validation.ErrorMessage);
-            }
+            foreach (var validation in validationResult.Errors) ValidationErrors.Add(validation.ErrorMessage);
         }
     }
 }

@@ -4,14 +4,94 @@
     "D:\\projects\\seven-peek\\Final\\SevenPeaks.VehicleTrackingSystem\\Source\\Presentation\\API\\API.csproj": {}
   },
   "projects": {
-    "D:\\projects\\seven-peek\\Final\\SevenPeaks.VehicleTrackingSystem\\Source\\Presentation\\API\\API.csproj": {
+    "D:\\projects\\seven-peek\\Final\\SevenPeaks.VehicleTrackingSystem\\Source\\Core\\Application\\Application.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\projects\\seven-peek\\Final\\SevenPeaks.VehicleTrackingSystem\\Source\\Presentation\\API\\API.csproj",
-        "projectName": "API",
-        "projectPath": "D:\\projects\\seven-peek\\Final\\SevenPeaks.VehicleTrackingSystem\\Source\\Presentation\\API\\API.csproj",
+        "projectUniqueName": "D:\\projects\\seven-peek\\Final\\SevenPeaks.VehicleTrackingSystem\\Source\\Core\\Application\\Application.csproj",
+        "projectName": "Application",
+        "projectPath": "D:\\projects\\seven-peek\\Final\\SevenPeaks.VehicleTrackingSystem\\Source\\Core\\Application\\Application.csproj",
         "packagesPath": "C:\\Users\\Addisalem\\.nuget\\packages\\",
-        "outputPath": "D:\\projects\\seven-peek\\Final\\SevenPeaks.VehicleTrackingSystem\\Source\\Presentation\\API\\obj\\",
+        "outputPath": "D:\\projects\\seven-peek\\Final\\SevenPeaks.VehicleTrackingSystem\\Source\\Core\\Application\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Addisalem\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {},
+          "https://nuget.devexpress.com/ClNagZ62Ycgjfe2aGeQ1f7QV7wfqwGATAFHUw58f6fkgrjqitz/api": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {
+              "D:\\projects\\seven-peek\\Final\\SevenPeaks.VehicleTrackingSystem\\Source\\Core\\Domain\\Domain.csproj": {
+                "projectPath": "D:\\projects\\seven-peek\\Final\\SevenPeaks.VehicleTrackingSystem\\Source\\Core\\Domain\\Domain.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "dependencies": {
+            "AutoMapper": {
+              "target": "Package",
+              "version": "[10.1.1, )"
+            },
+            "AutoMapper.Extensions.Microsoft.DependencyInjection": {
+              "target": "Package",
+              "version": "[8.1.1, )"
+            },
+            "FluentValidation": {
+              "target": "Package",
+              "version": "[10.3.0, )"
+            },
+            "MediatR.Extensions.Microsoft.DependencyInjection": {
+              "target": "Package",
+              "version": "[9.0.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.104\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\projects\\seven-peek\\Final\\SevenPeaks.VehicleTrackingSystem\\Source\\Core\\Domain\\Domain.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\projects\\seven-peek\\Final\\SevenPeaks.VehicleTrackingSystem\\Source\\Core\\Domain\\Domain.csproj",
+        "projectName": "Domain",
+        "projectPath": "D:\\projects\\seven-peek\\Final\\SevenPeaks.VehicleTrackingSystem\\Source\\Core\\Domain\\Domain.csproj",
+        "packagesPath": "C:\\Users\\Addisalem\\.nuget\\packages\\",
+        "outputPath": "D:\\projects\\seven-peek\\Final\\SevenPeaks.VehicleTrackingSystem\\Source\\Core\\Domain\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -43,6 +123,235 @@
       "frameworks": {
         "net5.0": {
           "targetAlias": "net5.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.104\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\projects\\seven-peek\\Final\\SevenPeaks.VehicleTrackingSystem\\Source\\Infrastructure\\Infrastructure.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\projects\\seven-peek\\Final\\SevenPeaks.VehicleTrackingSystem\\Source\\Infrastructure\\Infrastructure.csproj",
+        "projectName": "Infrastructure",
+        "projectPath": "D:\\projects\\seven-peek\\Final\\SevenPeaks.VehicleTrackingSystem\\Source\\Infrastructure\\Infrastructure.csproj",
+        "packagesPath": "C:\\Users\\Addisalem\\.nuget\\packages\\",
+        "outputPath": "D:\\projects\\seven-peek\\Final\\SevenPeaks.VehicleTrackingSystem\\Source\\Infrastructure\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Addisalem\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {},
+          "https://nuget.devexpress.com/ClNagZ62Ycgjfe2aGeQ1f7QV7wfqwGATAFHUw58f6fkgrjqitz/api": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {
+              "D:\\projects\\seven-peek\\Final\\SevenPeaks.VehicleTrackingSystem\\Source\\Core\\Application\\Application.csproj": {
+                "projectPath": "D:\\projects\\seven-peek\\Final\\SevenPeaks.VehicleTrackingSystem\\Source\\Core\\Application\\Application.csproj"
+              },
+              "D:\\projects\\seven-peek\\Final\\SevenPeaks.VehicleTrackingSystem\\Source\\Core\\Domain\\Domain.csproj": {
+                "projectPath": "D:\\projects\\seven-peek\\Final\\SevenPeaks.VehicleTrackingSystem\\Source\\Core\\Domain\\Domain.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "dependencies": {
+            "Microsoft.AspNetCore.Authentication.JwtBearer": {
+              "target": "Package",
+              "version": "[5.0.0, )"
+            },
+            "Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[5.0.0, )"
+            },
+            "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[5.0.0, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[5.0.0, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[5.0.0, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[5.0.0, )"
+            },
+            "Microsoft.Extensions.Options.ConfigurationExtensions": {
+              "target": "Package",
+              "version": "[5.0.0, )"
+            },
+            "Microsoft.Extensions.Options.ConfigurationExtensions": {
+              "target": "Package",
+              "version": "[5.0.0, )"
+            },
+            "Microsoft.Extensions.Options.ConfigurationExtensions": {
+              "target": "Package",
+              "version": "[5.0.0, )"
+            },
+            "SendGrid": {
+              "target": "Package",
+              "version": "[9.24.2, )"
+            },
+            "System.IdentityModel.Tokens.Jwt": {
+              "target": "Package",
+              "version": "[6.7.1, )"
+            },
+            "microsoft.extensions.dependencyinjection": {
+              "target": "Package",
+              "version": "[5.0.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.104\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\projects\\seven-peek\\Final\\SevenPeaks.VehicleTrackingSystem\\Source\\Presentation\\API\\API.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\projects\\seven-peek\\Final\\SevenPeaks.VehicleTrackingSystem\\Source\\Presentation\\API\\API.csproj",
+        "projectName": "API",
+        "projectPath": "D:\\projects\\seven-peek\\Final\\SevenPeaks.VehicleTrackingSystem\\Source\\Presentation\\API\\API.csproj",
+        "packagesPath": "C:\\Users\\Addisalem\\.nuget\\packages\\",
+        "outputPath": "D:\\projects\\seven-peek\\Final\\SevenPeaks.VehicleTrackingSystem\\Source\\Presentation\\API\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Addisalem\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {},
+          "https://nuget.devexpress.com/ClNagZ62Ycgjfe2aGeQ1f7QV7wfqwGATAFHUw58f6fkgrjqitz/api": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {
+              "D:\\projects\\seven-peek\\Final\\SevenPeaks.VehicleTrackingSystem\\Source\\Core\\Application\\Application.csproj": {
+                "projectPath": "D:\\projects\\seven-peek\\Final\\SevenPeaks.VehicleTrackingSystem\\Source\\Core\\Application\\Application.csproj"
+              },
+              "D:\\projects\\seven-peek\\Final\\SevenPeaks.VehicleTrackingSystem\\Source\\Infrastructure\\Infrastructure.csproj": {
+                "projectPath": "D:\\projects\\seven-peek\\Final\\SevenPeaks.VehicleTrackingSystem\\Source\\Infrastructure\\Infrastructure.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "dependencies": {
+            "MediatR": {
+              "target": "Package",
+              "version": "[9.0.0, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[5.0.0, )"
+            },
+            "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
+              "target": "Package",
+              "version": "[3.1.4, )"
+            },
+            "Serilog": {
+              "target": "Package",
+              "version": "[2.10.0, )"
+            },
+            "Serilog.AspNetCore": {
+              "target": "Package",
+              "version": "[3.4.0, )"
+            },
+            "Serilog.Extensions.Logging": {
+              "target": "Package",
+              "version": "[3.0.1, )"
+            },
+            "Serilog.Settings.Configuration": {
+              "target": "Package",
+              "version": "[3.1.0, )"
+            },
+            "Serilog.Sinks.File": {
+              "target": "Package",
+              "version": "[4.1.0, )"
+            },
+            "Swashbuckle.AspNetCore": {
+              "target": "Package",
+              "version": "[5.6.3, )"
+            },
+            "Swashbuckle.AspNetCore.Swagger": {
+              "target": "Package",
+              "version": "[5.6.3, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
