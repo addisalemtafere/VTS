@@ -9,3 +9,4 @@ D:\projects\seven-peek\Final\SevenPeaks.VehicleTrackingSystem\Source\Common\Shar
 D:\projects\seven-peek\Final\SevenPeaks.VehicleTrackingSystem\Source\Common\Shared\obj\Debug\net5.0\Shared.dll
 D:\projects\seven-peek\Final\SevenPeaks.VehicleTrackingSystem\Source\Common\Shared\obj\Debug\net5.0\ref\Shared.dll
 D:\projects\seven-peek\Final\SevenPeaks.VehicleTrackingSystem\Source\Common\Shared\obj\Debug\net5.0\Shared.pdb
+D:\projects\seven-peek\Final\SevenPeaks.VehicleTrackingSystem\Source\Common\Shared\obj\Debug\net5.0\Shared.csprojAssemblyReference.cache
