@@ -27,6 +27,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "API", "Source\Presentation\
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Docs", "Docs", "{E42620FA-B66C-4513-9C9A-1CE40615F7EA}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SevenPeaks.VehicleTrackingSystem.Tests", "SevenPeaks.VehicleTrackingSystem.Tests\SevenPeaks.VehicleTrackingSystem.Tests.csproj", "{577896F4-535E-4B9E-AD17-2649AD64CF29}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -53,6 +55,10 @@ Global
 		{BE607D30-5F87-459D-83B8-BD4E899765C2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BE607D30-5F87-459D-83B8-BD4E899765C2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BE607D30-5F87-459D-83B8-BD4E899765C2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{577896F4-535E-4B9E-AD17-2649AD64CF29}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{577896F4-535E-4B9E-AD17-2649AD64CF29}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{577896F4-535E-4B9E-AD17-2649AD64CF29}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{577896F4-535E-4B9E-AD17-2649AD64CF29}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -67,6 +73,7 @@ Global
 		{FC8F2040-B1CA-4157-AFED-4FB775ED6B63} = {BE9607D1-F949-43C6-ACA1-D41A598371A9}
 		{D9ABE064-CDD8-4F37-8E65-99B27FE9FA00} = {6A69E229-E16B-401D-A2F1-8739D9A72958}
 		{BE607D30-5F87-459D-83B8-BD4E899765C2} = {BDC51072-B87E-4362-8C6B-69EC536CF33A}
+		{577896F4-535E-4B9E-AD17-2649AD64CF29} = {9E1A12C6-BAED-46CC-9790-8646597CAC39}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {2E085209-F55D-4CF6-8DDF-5E115FB7A975}
