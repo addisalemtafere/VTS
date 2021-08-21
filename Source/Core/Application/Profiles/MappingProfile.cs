@@ -1,4 +1,5 @@
 ﻿using Application.Features.TrackingDevices;
+using Application.Features.Vehicles.Commands.CreateVehicle;
 using AutoMapper;
 using Domain.Entities;
 
@@ -9,6 +10,7 @@ namespace Application.Profiles
         public MappingProfile()
         {
             CreateMap<TrackingDevice, TrackingDeviceVM>().ReverseMap();
+            CreateMap<Vehicle, CreateVehicleDto>();
         }
     }
 }

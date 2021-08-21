@@ -61,8 +61,7 @@ namespace Infrastructure.Services.Identity
             var user = new ApplicationUser
             {
                 Email = request.Email,
-                FirstName = request.FirstName,
-                LastName = request.LastName,
+                Name = request.Name,
                 UserName = request.UserName,
                 EmailConfirmed = true
             };

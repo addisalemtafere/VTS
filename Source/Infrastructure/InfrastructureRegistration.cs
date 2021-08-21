@@ -34,7 +34,7 @@ namespace Infrastructure
             services.Configure<JwtSettings>(configuration.GetSection("JwtSettings"));
 
             services.AddDbContext<VehicleTrackingSystemDbContext>(options => options.UseSqlServer(
-                configuration.GetConnectionString("GloboTicketIdentityConnectionString"),
+                configuration.GetConnectionString("VehicleTrackingSystemConnectionString"),
                 b => b.MigrationsAssembly(typeof(VehicleTrackingSystemDbContext).Assembly.FullName)));
 
             services.AddIdentity<ApplicationUser, IdentityRole>()
