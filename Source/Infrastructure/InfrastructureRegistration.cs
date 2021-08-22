@@ -5,6 +5,7 @@ using Application.Models.Authentication;
 using Application.Models.Email;
 using Infrastructure.Mail;
 using Infrastructure.Models;
+using Infrastructure.Persistence;
 using Infrastructure.Persistence.Repository;
 using Infrastructure.Services.Identity;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
@@ -37,6 +38,10 @@ namespace Infrastructure
             services.AddDbContext<VehicleTrackingSystemDbContext>(options => options.UseSqlServer(
                 configuration.GetConnectionString("VehicleTrackingSystemConnectionString"),
                 b => b.MigrationsAssembly(typeof(VehicleTrackingSystemDbContext).Assembly.FullName)));
+
+
+            services.AddSingleton<ISqlConnectionFactory>(x =>
+            new SqlConnectionFactory(configuration.GetConnectionString("VehicleTrackingSystemConnectionString")));
 
             services.AddIdentity<ApplicationUser, IdentityRole>()
                 .AddEntityFrameworkStores<VehicleTrackingSystemDbContext>().AddDefaultTokenProviders();
@@ -100,11 +105,9 @@ namespace Infrastructure
 
             services.AddScoped(typeof(IRepository<>), typeof(BaseRepository<>));
             services.AddScoped<ITrackingDeviceRepository, TrackingDeviceRepository>();
+            services.AddScoped<ILocationRepository, LocationRepository>();
 
-            //services.AddScoped<ICategoryRepository, CategoryRepository>();
-            //services.AddScoped<IEventRepository, EventRepository>();
-            //services.AddScoped<IOrderRepository, OrderRepository>();
-            //end
+         
 
             return services;
         }

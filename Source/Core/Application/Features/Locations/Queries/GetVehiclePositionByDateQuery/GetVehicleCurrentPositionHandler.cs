@@ -3,21 +3,22 @@ using System.Threading;
 using System.Threading.Tasks;
 using Application.Contracts.Repositories;
 using Application.Features.Locations.Commands;
+using Application.Features.Locations.Queries.GetVehicleCurrentPosition;
 using AutoMapper;
 using Domain.Entities;
 using GoogleMaps.LocationServices;
 using MediatR;
 
-namespace Application.Features.Locations.Queries.GetVehicleCurrentPosition
+namespace Application.Features.Locations.Queries.GetVehiclePositionByDateQuery
 {
-    public class GetVehicleCurrentPositionHandler : IRequestHandler<GetVehicleCurrentPositionQuery,
-        GetVehicleCurrentLocationQueryResponse>
+    public class GetVehiclePositionByDateQueryHandler : IRequestHandler<GetVehiclePositionByDateQuery,
+        GetVehiclePositionByDateQueryResponse>
     {
         private readonly IRepository<Location> _repository;
         private readonly ILocationRepository _locationRepository;
         private readonly IMapper _mapper;
 
-        public GetVehicleCurrentPositionHandler(IRepository<Location> repository,
+        public GetVehiclePositionByDateQueryHandler(IRepository<Location> repository,
             ILocationRepository locationRepository,
             IMapper mapper)
         {
@@ -26,12 +27,12 @@ namespace Application.Features.Locations.Queries.GetVehicleCurrentPosition
             _mapper = mapper;
         }
 
-        public async Task<GetVehicleCurrentLocationQueryResponse> Handle(GetVehicleCurrentPositionQuery request,
+        public async Task<GetVehiclePositionByDateQueryResponse> Handle(GetVehiclePositionByDateQuery request,
             CancellationToken cancellationToken)
         {
-            var createLocationCommandResponse = new GetVehicleCurrentLocationQueryResponse();
+            var createLocationCommandResponse = new GetVehiclePositionByDateQueryResponse();
 
-            var validator = new GetVehicleCurrentPositionQueryValidator();
+            var validator = new GetVehiclePositionByDateQueryQueryValidator();
             var validationResult = await validator.ValidateAsync(request, cancellationToken);
 
             if (validationResult.Errors.Count > 0)
@@ -46,24 +47,11 @@ namespace Application.Features.Locations.Queries.GetVehicleCurrentPosition
 
             if (createLocationCommandResponse.Success)
             {
-                var location = await _repository.GetByIdAsync(request.VehicleId);
-                var location2 = await _locationRepository.Get(request.VehicleId);
-                var gls = new GoogleLocationService();
+                var locationResponse = await _locationRepository.GetByDate(request.VehicleId);
 
+                var locationDto = _mapper.Map<List<VehiclePositionDto>>(locationResponse);
 
-                var locationDto = _mapper.Map<VehicleCurrentLocationDto>(location);
-
-                try
-                {
-                    var adress3 = gls.GetRegionFromLatLong(locationDto.Latitude, locationDto.Longitude);
-                    var adress = gls.GetAddressFromLatLang(locationDto.Latitude, locationDto.Longitude).ToString();
-                }
-                catch (System.Exception ex)
-                {
-                    throw;
-                }
-
-                createLocationCommandResponse.CurrentLocation = locationDto;
+                createLocationCommandResponse.VehiclePosition = locationDto;
             }
 
             return createLocationCommandResponse;

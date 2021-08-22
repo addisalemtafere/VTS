@@ -8,6 +8,8 @@ using System.Linq;
 using System.Threading.Tasks;
 using Application.Features.Locations.Commands;
 using Application.Features.Locations.Queries.GetVehicleCurrentPosition;
+using Application.Features.Locations.Queries.GetVehiclePositionByDateQuery;
+
 
 namespace API.Controller
 {
@@ -37,6 +39,22 @@ namespace API.Controller
         {
             var getCurrentPosition = new GetVehicleCurrentPositionQuery() {VehicleId = VehicleId};
             var vehiclePosition = await _mediator.Send(getCurrentPosition);
+            return Ok(vehiclePosition);
+        }
+
+        [HttpGet("RetrieveVehiclePositionByDate", Name = "RetrieveVehiclePositionByDate")]
+        [ProducesResponseType(StatusCodes.Status200OK)]
+        [ProducesDefaultResponseType]
+        public async Task<ActionResult<GetVehiclePositionByDateQueryResponse>> GetVehiclePositionByDate(int VehicleId,
+            DateTime FromDate, DateTime ToDate)
+        {
+            var getPosition = new GetVehiclePositionByDateQuery()
+            {
+                VehicleId = VehicleId,
+                FromDate = FromDate,
+                ToDate = ToDate
+            };
+            var vehiclePosition = await _mediator.Send(getPosition);
             return Ok(vehiclePosition);
         }
     }

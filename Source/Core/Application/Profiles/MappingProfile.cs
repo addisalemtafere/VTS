@@ -15,6 +15,7 @@ namespace Application.Profiles
             CreateMap<Vehicle, CreateVehicleDto>();
             CreateMap<Location, CreateLocationDto>();
             CreateMap<Location, VehicleCurrentLocationDto>();
+            CreateMap<Location, VehiclePositionDto>();
         }
     }
 }
