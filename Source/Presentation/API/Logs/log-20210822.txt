@@ -190,3 +190,14 @@ Error Number:547,State:0,Class:16
 2021-08-22 13:36:28.496 -04:00 [INF] Application Starting
 2021-08-22 13:38:15.566 -04:00 [INF] Application Starting
 2021-08-22 14:28:58.606 -04:00 [INF] Application Starting
+2021-08-22 14:42:44.184 -04:00 [INF] Application Starting
+2021-08-22 14:44:20.943 -04:00 [INF] Application Starting
+2021-08-22 14:50:46.461 -04:00 [INF] Application Starting
+2021-08-22 14:54:25.139 -04:00 [WRN] User password validation failed: PasswordRequiresDigit;PasswordRequiresUpper.
+2021-08-22 15:03:04.917 -04:00 [INF] Application Starting
+2021-08-22 15:11:44.319 -04:00 [INF] Application Starting
+2021-08-22 15:12:56.449 -04:00 [INF] Application Starting
+2021-08-22 15:13:55.382 -04:00 [INF] Application Starting
+2021-08-22 15:16:36.701 -04:00 [INF] Application Starting
+2021-08-22 15:21:51.415 -04:00 [INF] Application Starting
+2021-08-22 15:23:55.589 -04:00 [INF] Application Starting

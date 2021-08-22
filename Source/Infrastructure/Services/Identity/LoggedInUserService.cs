@@ -8,7 +8,7 @@ namespace Infrastructure.Services.Identity
     {
         public LoggedInUserService(IHttpContextAccessor httpContextAccessor)
         {
-            UserId = httpContextAccessor.HttpContext?.User?.FindFirstValue(ClaimTypes.NameIdentifier);
+            UserId = httpContextAccessor.HttpContext?.User?.FindFirst("uid")?.Value;
         }
 
         public string UserId { get; }

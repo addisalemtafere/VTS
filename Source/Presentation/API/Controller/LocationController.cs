@@ -9,19 +9,25 @@ using System.Threading.Tasks;
 using Application.Features.Locations.Commands;
 using Application.Features.Locations.Queries.GetVehicleCurrentPosition;
 using Application.Features.Locations.Queries.GetVehiclePositionByDateQuery;
-
+using Microsoft.AspNetCore.Authorization;
+using API.Services;
+using Application.Contracts;
 
 namespace API.Controller
 {
+    [Authorize]
     [Route("api/[controller]")]
     [ApiController]
     public class LocationController : ControllerBase
     {
         private readonly IMediator _mediator;
+        private readonly ILoggedInUserService _loggedInUserService;
 
-        public LocationController(IMediator mediator)
+        public LocationController(IMediator mediator,
+            ILoggedInUserService loggedInUserService)
         {
             _mediator = mediator;
+            _loggedInUserService = loggedInUserService;
         }
 
         [HttpPost("RecordVehiclePosition", Name = "RecordVehiclePosition")]
@@ -48,6 +54,7 @@ namespace API.Controller
         public async Task<ActionResult<GetVehiclePositionByDateQueryResponse>> GetVehiclePositionByDate(int VehicleId,
             DateTime FromDate, DateTime ToDate)
         {
+            var user = _loggedInUserService.UserId;
             var getPosition = new GetVehiclePositionByDateQuery()
             {
                 VehicleId = VehicleId,
