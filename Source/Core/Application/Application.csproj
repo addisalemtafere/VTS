@@ -22,6 +22,7 @@
   <ItemGroup>
     <Folder Include="Contracts\Common\" />
     <Folder Include="Features\Location\" />
+    <Folder Include="Features\Location\Queries" />
     <Folder Include="Features\Vehicles\Queries\" />
   </ItemGroup>
 

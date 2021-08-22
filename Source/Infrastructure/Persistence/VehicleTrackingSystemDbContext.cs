@@ -51,5 +51,4 @@ namespace Persistence
             base.OnModelCreating(builder);
         }
     }
-
 }

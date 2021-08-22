@@ -73,7 +73,7 @@ namespace Infrastructure.Services.Identity
                 var result = await _userManager.CreateAsync(user, request.Password);
 
                 if (result.Succeeded)
-                    return new RegistrationResponse() {UserId = user.Id};
+                    return new RegistrationResponse() { UserId = user.Id };
                 else
                     throw new Exception($"{result.Errors}");
             }

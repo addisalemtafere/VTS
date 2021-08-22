@@ -10,7 +10,6 @@ namespace Domain.Entities
         public string Model { get; set; }
         public Guid Imei { get; set; }
         public TrackingDeviceStatus TrackingDeviceStatus { get; set; }
-        
     }
 
     public enum TrackingDeviceStatus

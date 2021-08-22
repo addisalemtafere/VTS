@@ -15,24 +15,27 @@ namespace Application.Features.Vehicles.Commands.CreateVehicle
     public class CreateVehicleCommandHandler : IRequestHandler<CreateVehicleCommand, CreateVehicleCommandResponse>
     {
         private readonly IRepository<Vehicle> _categoryRepository;
+        private readonly ITrackingDeviceRepository _trackingDeviceRepository;
         private readonly IMapper _mapper;
         private readonly IAuthenticationService _authenticationService;
 
         public CreateVehicleCommandHandler(IMapper mapper,
-            IRepository<Vehicle> categoryRepository,
+            IRepository<Vehicle> vehicleRepository,
+            ITrackingDeviceRepository trackingDeviceRepository,
             IAuthenticationService authenticationService)
         {
             _mapper = mapper;
-            _categoryRepository = categoryRepository;
+            _categoryRepository = vehicleRepository;
             _authenticationService = authenticationService;
+            _trackingDeviceRepository = trackingDeviceRepository;
         }
 
         public async Task<CreateVehicleCommandResponse> Handle(CreateVehicleCommand request, CancellationToken cancellationToken)
         {
             var createVehicleCommandResponse = new CreateVehicleCommandResponse();
 
-            var validator = new CreateVehicleCommandValidator();
-            var validationResult = await validator.ValidateAsync(request);
+            var validator = new CreateVehicleCommandValidator(_trackingDeviceRepository);
+            var validationResult = await validator.ValidateAsync(request, cancellationToken);
 
             if (validationResult.Errors.Count > 0)
             {

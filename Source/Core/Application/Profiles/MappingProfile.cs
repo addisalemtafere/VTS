@@ -1,4 +1,5 @@
-﻿using Application.Features.TrackingDevices;
+﻿using Application.Features.Location.Commands;
+using Application.Features.TrackingDevices;
 using Application.Features.Vehicles.Commands.CreateVehicle;
 using AutoMapper;
 using Domain.Entities;
@@ -11,6 +12,7 @@ namespace Application.Profiles
         {
             CreateMap<TrackingDevice, TrackingDeviceVM>().ReverseMap();
             CreateMap<Vehicle, CreateVehicleDto>();
+            CreateMap<Location, CreateLocationDto>();
         }
     }
 }

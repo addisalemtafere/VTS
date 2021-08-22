@@ -731,3 +731,5 @@ Error Number:207,State:1,Class:16
 2021-08-21 08:50:24.238 -04:00 [WRN] User password validation failed: PasswordRequiresDigit;PasswordRequiresUpper.
 2021-08-21 08:51:41.228 -04:00 [WRN] User validation failed: InvalidUserName.
 2021-08-21 08:52:17.259 -04:00 [WRN] User validation failed: InvalidUserName.
+2021-08-21 08:57:08.426 -04:00 [INF] Application Starting
+2021-08-21 09:01:28.547 -04:00 [INF] Application Starting

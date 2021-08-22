@@ -1,13 +1,11 @@
-﻿
-using Application.Responses;
+﻿using Application.Responses;
 
 namespace Application.Features.Vehicles.Commands.CreateVehicle
 {
-    public class CreateVehicleCommandResponse: BaseResponse
+    public class CreateVehicleCommandResponse : BaseResponse
     {
-        public CreateVehicleCommandResponse(): base()
+        public CreateVehicleCommandResponse() : base()
         {
-
         }
 
         public CreateVehicleDto Vehicle { get; set; }
