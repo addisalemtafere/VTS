@@ -1,6 +1,6 @@
 ﻿using Application.Responses;
 
-namespace Application.Features.Location.Commands
+namespace Application.Features.Locations.Commands
 {
     public class CreateLocationCommandResponse : BaseResponse
     {

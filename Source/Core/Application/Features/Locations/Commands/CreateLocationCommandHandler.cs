@@ -6,7 +6,7 @@ using Application.Contracts.Services.Identity;
 using AutoMapper;
 using MediatR;
 
-namespace Application.Features.Location.Commands
+namespace Application.Features.Locations.Commands
 {
     public class CreateLocationCommandHandler : IRequestHandler<CreateLocationCommand, CreateLocationCommandResponse>
     {

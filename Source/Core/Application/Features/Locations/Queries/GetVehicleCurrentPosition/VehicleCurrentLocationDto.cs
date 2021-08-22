@@ -1,11 +1,9 @@
 ﻿using System;
 using System.ComponentModel.DataAnnotations;
-using Application.Features.Vehicles.Commands.CreateVehicle;
-using MediatR;
 
-namespace Application.Features.Location.Commands
+namespace Application.Features.Locations.Queries.GetVehicleCurrentPosition
 {
-    public class CreateLocationCommand : IRequest<CreateLocationCommandResponse>
+    public class VehicleCurrentLocationDto
     {
         public int LocationId { get; set; }
         public double Latitude { get; set; }

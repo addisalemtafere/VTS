@@ -5,7 +5,7 @@ using Application.Contracts.Repositories;
 using Application.Features.Vehicles.Commands.CreateVehicle;
 using FluentValidation;
 
-namespace Application.Features.Location.Commands
+namespace Application.Features.Locations.Commands
 {
     public class CreateLocationCommandValidator : AbstractValidator<CreateLocationCommand>
     {
