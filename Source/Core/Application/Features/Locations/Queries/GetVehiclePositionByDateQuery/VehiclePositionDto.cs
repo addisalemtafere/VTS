@@ -9,16 +9,9 @@ namespace Application.Features.Locations.Queries.GetVehicleCurrentPosition
         public double Latitude { get; set; }
         public double Longitude { get; set; }
         public double Altitude { get; set; }
-        public double HorizontalAccuracy { get; set; }
-        public double VerticalAccuracy { get; set; }
-        public double Speed { get; set; }
-        public DateTime CreatedTime { get; set; } = DateTime.Now;
 
-        [DisplayFormat(ApplyFormatInEditMode = true, DataFormatString = "{0:yyyy/MM/dd HH:mm}")]
-        public DateTime DateFrom { get; set; }
+        public DateTime CreatedDate { get; set; } = DateTime.Now;
 
-        [DisplayFormat(ApplyFormatInEditMode = true, DataFormatString = "{0:yyyy/MM/dd HH:mm}")]
-        public DateTime DateTo { get; set; }
 
         public int VehicleId { get; set; }
         public string Locality { get; set; }

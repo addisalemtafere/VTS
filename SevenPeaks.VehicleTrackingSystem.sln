@@ -22,11 +22,13 @@ EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "API", "Source\Presentation\API\API.csproj", "{BE607D30-5F87-459D-83B8-BD4E899765C2}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Docs", "Docs", "{E42620FA-B66C-4513-9C9A-1CE40615F7EA}"
+EndProject
+Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{E89DDBB3-996D-43BF-B1B4-7A252608CC67}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "PostManCollection", "PostManCollection", "{A2B71C47-F784-462B-971F-4A4E72FA37CC}"
 	ProjectSection(SolutionItems) = preProject
 		Docs\PostmanCollection\Seven Peaks VehicleTracking System API.postman_collection.json = Docs\PostmanCollection\Seven Peaks VehicleTracking System API.postman_collection.json
 	EndProjectSection
-EndProject
-Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{E89DDBB3-996D-43BF-B1B4-7A252608CC67}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -66,6 +68,7 @@ Global
 		{FC8F2040-B1CA-4157-AFED-4FB775ED6B63} = {BE9607D1-F949-43C6-ACA1-D41A598371A9}
 		{D9ABE064-CDD8-4F37-8E65-99B27FE9FA00} = {6A69E229-E16B-401D-A2F1-8739D9A72958}
 		{BE607D30-5F87-459D-83B8-BD4E899765C2} = {BDC51072-B87E-4362-8C6B-69EC536CF33A}
+		{A2B71C47-F784-462B-971F-4A4E72FA37CC} = {E42620FA-B66C-4513-9C9A-1CE40615F7EA}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {2E085209-F55D-4CF6-8DDF-5E115FB7A975}
