@@ -67,7 +67,15 @@ namespace Application.Features.Vehicles.Commands.CreateVehicle
                 };
                 vehicle.TrackingDevice = trackerRequest;
                 vehicle = await _vehicleRepository.AddAsync(vehicle);
-                createVehicleCommandResponse.Vehicle = _mapper.Map<CreateVehicleDto>(vehicle);
+
+                CreateVehicleDto vehicleRespose = new CreateVehicleDto
+                {
+                    Name = request.Name,
+                    UserId = user.UserId,
+                    VehicleId = vehicle.Id
+                };
+
+                createVehicleCommandResponse.Vehicle = vehicleRespose;
             }
 
             return createVehicleCommandResponse;

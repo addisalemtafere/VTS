@@ -751,3 +751,4 @@ System.NullReferenceException: Object reference not set to an instance of an obj
 2021-08-23 15:51:45.584 -04:00 [INF] Application Starting
 2021-08-23 15:53:26.245 -04:00 [WRN] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results.
 2021-08-23 15:53:26.253 -04:00 [WRN] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results.
+2021-08-23 16:03:56.097 -04:00 [INF] Application Starting
