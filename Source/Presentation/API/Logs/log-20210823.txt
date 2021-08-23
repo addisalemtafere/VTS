@@ -710,3 +710,6 @@ Error Number:10742,State:1,Class:15
 2021-08-23 12:48:41.671 -04:00 [INF] Application Starting
 2021-08-23 12:49:58.756 -04:00 [WRN] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results.
 2021-08-23 12:49:58.762 -04:00 [WRN] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results.
+2021-08-23 12:53:34.318 -04:00 [INF] Application Starting
+2021-08-23 12:53:38.931 -04:00 [WRN] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results.
+2021-08-23 12:53:38.935 -04:00 [WRN] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results.
