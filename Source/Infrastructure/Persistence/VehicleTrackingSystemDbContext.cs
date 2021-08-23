@@ -8,14 +8,19 @@ using System;
 using System.Reflection;
 using System.Threading;
 using System.Threading.Tasks;
+using Application.Contracts;
 
 namespace Persistence
 {
     public class VehicleTrackingSystemDbContext : IdentityDbContext<ApplicationUser>
     {
-        public VehicleTrackingSystemDbContext(DbContextOptions<VehicleTrackingSystemDbContext> dbContextOptions) : base(
+        private readonly ILoggedInUserService _loggedInUserService;
+
+        public VehicleTrackingSystemDbContext(DbContextOptions<VehicleTrackingSystemDbContext> dbContextOptions,
+            ILoggedInUserService loggedInUserService) : base(
             dbContextOptions)
         {
+            _loggedInUserService = loggedInUserService;
         }
 
         public DbSet<TrackingDevice> TrackingDevices { get; set; }
@@ -29,10 +34,13 @@ namespace Persistence
                 {
                     case EntityState.Added:
                         entry.Entity.CreatedDate = DateTime.Now;
+                        entry.Entity.CreatedBy = _loggedInUserService.UserName;
                         break;
 
                     case EntityState.Modified:
                         entry.Entity.ModifiedDate = DateTime.Now;
+                        entry.Entity.ModifiedBy = _loggedInUserService.UserName;
+
                         break;
                 }
 
@@ -41,10 +49,7 @@ namespace Persistence
 
         protected override void OnModelCreating(ModelBuilder builder)
         {
-            builder.Entity<Vehicle>(b =>
-            {
-                b.HasOne<ApplicationUser>().WithMany().HasForeignKey(x => x.UserId);
-            });
+            builder.Entity<Vehicle>(b => { b.HasOne<ApplicationUser>().WithMany().HasForeignKey(x => x.UserId); });
 
             builder.ApplyConfigurationsFromAssembly(Assembly.GetExecutingAssembly());
 

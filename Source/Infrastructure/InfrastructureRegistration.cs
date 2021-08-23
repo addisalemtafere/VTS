@@ -41,7 +41,7 @@ namespace Infrastructure
 
 
             services.AddSingleton<ISqlConnectionFactory>(x =>
-            new SqlConnectionFactory(configuration.GetConnectionString("VehicleTrackingSystemConnectionString")));
+                new SqlConnectionFactory(configuration.GetConnectionString("VehicleTrackingSystemConnectionString")));
 
             services.AddIdentity<ApplicationUser, IdentityRole>()
                 .AddEntityFrameworkStores<VehicleTrackingSystemDbContext>().AddDefaultTokenProviders();
@@ -107,7 +107,6 @@ namespace Infrastructure
             services.AddScoped<ITrackingDeviceRepository, TrackingDeviceRepository>();
             services.AddScoped<ILocationRepository, LocationRepository>();
 
-         
 
             return services;
         }

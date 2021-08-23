@@ -39,9 +39,7 @@ namespace Application.Features.Locations.Queries.GetVehicleCurrentPosition
                 createLocationCommandResponse.Success = false;
                 createLocationCommandResponse.ValidationErrors = new List<string>();
                 foreach (var error in validationResult.Errors)
-                {
                     createLocationCommandResponse.ValidationErrors.Add(error.ErrorMessage);
-                }
             }
 
             if (createLocationCommandResponse.Success)

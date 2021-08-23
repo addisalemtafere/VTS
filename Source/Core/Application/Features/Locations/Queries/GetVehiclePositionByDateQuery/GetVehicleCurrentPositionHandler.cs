@@ -40,9 +40,7 @@ namespace Application.Features.Locations.Queries.GetVehiclePositionByDateQuery
                 createLocationCommandResponse.Success = false;
                 createLocationCommandResponse.ValidationErrors = new List<string>();
                 foreach (var error in validationResult.Errors)
-                {
                     createLocationCommandResponse.ValidationErrors.Add(error.ErrorMessage);
-                }
             }
 
             if (createLocationCommandResponse.Success)

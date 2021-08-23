@@ -73,7 +73,7 @@ namespace Infrastructure.Services.Identity
                 var result = await _userManager.CreateAsync(user, request.Password);
 
                 if (result.Succeeded)
-                    return new RegistrationResponse() { UserId = user.Id };
+                    return new RegistrationResponse() {UserId = user.Id};
                 else
                     throw new Exception($"{result.Errors}");
             }
@@ -94,11 +94,10 @@ namespace Infrastructure.Services.Identity
 
             var claims = new[]
                 {
-                new Claim("uid", user.Id),
+                    new Claim("uid", user.Id),
                     new Claim(JwtRegisteredClaimNames.Sub, user.UserName),
                     new Claim(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString()),
                     new Claim(JwtRegisteredClaimNames.Email, user.Email)
-                    
                 }
                 .Union(userClaims)
                 .Union(roleClaims);

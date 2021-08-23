@@ -17,7 +17,8 @@ namespace API.Controller
         }
 
         [HttpPost("registerVehicle", Name = "RegisterVehicle")]
-        public async Task<ActionResult<CreateVehicleCommandResponse>> Create([FromBody] CreateVehicleCommand createVehicleCommand)
+        public async Task<ActionResult<CreateVehicleCommandResponse>> Create(
+            [FromBody] CreateVehicleCommand createVehicleCommand)
         {
             var response = await _mediator.Send(createVehicleCommand);
             return Ok(response);

@@ -19,8 +19,8 @@ namespace Application.Features.Vehicles.Commands.CreateVehicle
                 .MaximumLength(50).WithMessage("{PropertyName} must not exceed 50 characters.");
 
             RuleFor(e => e)
-               .MustAsync(VehicleTrackerDeviceUnique)
-               .WithMessage("An event with the same name and date already exists.");
+                .MustAsync(VehicleTrackerDeviceUnique)
+                .WithMessage("An Vehicle with the same identity and date already exists.");
         }
 
         private async Task<bool> VehicleTrackerDeviceUnique(CreateVehicleCommand request, CancellationToken token)

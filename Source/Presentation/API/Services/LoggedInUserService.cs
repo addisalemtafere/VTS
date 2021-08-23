@@ -8,11 +8,11 @@ namespace API.Services
     {
         public LoggedInUserService(IHttpContextAccessor httpContextAccessor)
         {
-            //UserName = httpContextAccessor.HttpContext?.User?.FindFirstValue(ClaimTypes.NameIdentifier);
+            UserName = httpContextAccessor.HttpContext?.User?.FindFirstValue(ClaimTypes.NameIdentifier);
             UserId = httpContextAccessor.HttpContext?.User?.FindFirst("uid")?.Value;
         }
 
-       // public string UserName { get; }
+        public string UserName { get; }
         public string UserId { get; }
     }
 }
