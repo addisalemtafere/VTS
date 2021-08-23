@@ -1,7 +1,6 @@
 ﻿using Application.Contracts;
 using Application.Contracts.Repositories;
 using FluentValidation;
-using System;
 using System.Threading;
 using System.Threading.Tasks;
 
@@ -32,7 +31,6 @@ namespace Application.Features.Locations.Commands
                 .NotNull()
                 .MaximumLength(50).WithMessage("{PropertyName} must not exceed 50 characters.");
 
-
             RuleFor(p => p.Altitude)
                 .NotEmpty().WithMessage("{PropertyName} is required")
                 .NotNull().WithMessage("{PropertyName} is required");
@@ -44,7 +42,6 @@ namespace Application.Features.Locations.Commands
             RuleFor(p => p.Latitude)
                 .NotEmpty().WithMessage("{PropertyName} is required")
                 .NotNull().WithMessage("{PropertyName} is required");
-
 
             RuleFor(p => p.VehicleId)
                 .NotEmpty().WithMessage("{PropertyName} is required")

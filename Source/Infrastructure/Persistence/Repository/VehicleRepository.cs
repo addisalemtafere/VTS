@@ -1,11 +1,11 @@
-﻿using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Application.Contracts.Repositories;
+﻿using Application.Contracts.Repositories;
 using Domain.Entities;
 using Microsoft.EntityFrameworkCore;
 using Persistence;
 using Persistence.Repository;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
 
 namespace Infrastructure.Persistence.Repository
 {

@@ -1,6 +1,5 @@
 ﻿using MediatR;
 using System;
-using System.ComponentModel.DataAnnotations;
 
 namespace Application.Features.Locations.Commands
 {
