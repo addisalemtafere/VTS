@@ -61,7 +61,7 @@ namespace Application.Features.Vehicles.Commands.CreateVehicle
                 };
                 var trackerRequest = new TrackingDevice()
                 {
-                    Imei = request.ImeiNumber,
+                    Imei = request.Imei,
                     Name = request.TrackingDeviceName,
                     TrackingDeviceStatus = request.Status
                 };

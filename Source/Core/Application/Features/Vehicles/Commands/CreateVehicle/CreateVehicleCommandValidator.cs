@@ -25,8 +25,8 @@ namespace Application.Features.Vehicles.Commands.CreateVehicle
 
         private async Task<bool> VehicleTrackerDeviceUnique(CreateVehicleCommand request, CancellationToken token)
         {
-            var device = await _trackingDevicerepository.GetByImeiAsync(request.ImeiNumber);
-            return device != null;
+            var device = await _trackingDevicerepository.GetByImeiAsync(request.Imei);
+            return device == null;
         }
     }
 }

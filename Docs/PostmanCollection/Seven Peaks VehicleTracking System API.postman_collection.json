@@ -494,7 +494,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"vehicleId\": 64492399,\n    \"vehicleName\": \"aute\",\n    \"maker\": \"occaecat est eu deserunt ea\",\n    \"model\": \"minim sed in\",\n    \"year\": \"ut proident\",\n    \"bodyType\": \"mollit fugiat minim\",\n    \"userId\": 14401490,\n    \"name\": \"fugiat Duis reprehenderit\",\n    \"userName\": \"labore aliqua inci\",\n    \"password\": \"magna Excepteur exercitation et consectetur\",\n    \"mobileNumber\": \"aute minim\",\n    \"email\": \"eu\",\n    \"userTypeId\": -6074208,\n    \"deviceId\": 86810778,\n    \"imeiNumber\": \"urn:uuid:3a0ffb24-88e9-ccd3-de0e-a57c1a300dfe\",\n    \"trackingDeviceName\": \"consequ\",\n    \"status\": 2\n}"
+							"raw": "{\n    \"vehicleId\": 64492399,\n    \"vehicleName\": \"aute\",\n    \"maker\": \"occaecat est eu deserunt ea\",\n    \"model\": \"minim sed in\",\n    \"year\": \"ut proident\",\n    \"bodyType\": \"mollit fugiat minim\",\n    \"userId\": 14401490,\n    \"name\": \"fugiat Duis reprehenderit\",\n    \"userName\": \"labore aliqua inci\",\n    \"password\": \"magna Excepteur exercitation et consectetur\",\n    \"mobileNumber\": \"aute minim\",\n    \"email\": \"eu\",\n    \"userTypeId\": -6074208,\n    \"deviceId\": 86810778,\n    \"Imei\": \"urn:uuid:3a0ffb24-88e9-ccd3-de0e-a57c1a300dfe\",\n    \"trackingDeviceName\": \"consequ\",\n    \"status\": 2\n}"
 						},
 						"url": {
 							"raw": "{{baseUrl}}/api/Vehicle/registerVehicle",
@@ -522,7 +522,7 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\n    \"vehicleId\": 64492399,\n    \"vehicleName\": \"aute\",\n    \"maker\": \"occaecat est eu deserunt ea\",\n    \"model\": \"minim sed in\",\n    \"year\": \"ut proident\",\n    \"bodyType\": \"mollit fugiat minim\",\n    \"userId\": 14401490,\n    \"name\": \"fugiat Duis reprehenderit\",\n    \"userName\": \"labore aliqua inci\",\n    \"password\": \"magna Excepteur exercitation et consectetur\",\n    \"mobileNumber\": \"aute minim\",\n    \"email\": \"eu\",\n    \"userTypeId\": -6074208,\n    \"deviceId\": 86810778,\n    \"imeiNumber\": \"urn:uuid:3a0ffb24-88e9-ccd3-de0e-a57c1a300dfe\",\n    \"trackingDeviceName\": \"consequ\",\n    \"status\": 2\n}"
+									"raw": "{\n    \"vehicleId\": 64492399,\n    \"vehicleName\": \"aute\",\n    \"maker\": \"occaecat est eu deserunt ea\",\n    \"model\": \"minim sed in\",\n    \"year\": \"ut proident\",\n    \"bodyType\": \"mollit fugiat minim\",\n    \"userId\": 14401490,\n    \"name\": \"fugiat Duis reprehenderit\",\n    \"userName\": \"labore aliqua inci\",\n    \"password\": \"magna Excepteur exercitation et consectetur\",\n    \"mobileNumber\": \"aute minim\",\n    \"email\": \"eu\",\n    \"userTypeId\": -6074208,\n    \"deviceId\": 86810778,\n    \"Imei\": \"urn:uuid:3a0ffb24-88e9-ccd3-de0e-a57c1a300dfe\",\n    \"trackingDeviceName\": \"consequ\",\n    \"status\": 2\n}"
 								},
 								"url": {
 									"raw": "{{baseUrl}}/api/Vehicle/registerVehicle",

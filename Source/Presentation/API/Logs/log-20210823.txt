@@ -698,3 +698,15 @@ Error Number:10742,State:1,Class:15
 2021-08-23 12:13:13.723 -04:00 [INF] Application Starting
 2021-08-23 12:13:19.240 -04:00 [WRN] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results.
 2021-08-23 12:13:19.246 -04:00 [WRN] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results.
+2021-08-23 12:20:08.651 -04:00 [INF] Application Starting
+2021-08-23 12:20:15.996 -04:00 [WRN] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results.
+2021-08-23 12:20:16.001 -04:00 [WRN] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results.
+2021-08-23 12:40:20.165 -04:00 [WRN] User password validation failed: PasswordRequiresDigit;PasswordRequiresUpper.
+2021-08-23 12:40:35.550 -04:00 [WRN] User validation failed: InvalidUserName.
+2021-08-23 12:40:52.867 -04:00 [WRN] User validation failed: InvalidUserName.
+2021-08-23 12:41:02.308 -04:00 [WRN] User validation failed: InvalidUserName.
+2021-08-23 12:41:13.805 -04:00 [WRN] User validation failed: InvalidUserName.
+2021-08-23 12:45:22.234 -04:00 [INF] Application Starting
+2021-08-23 12:48:41.671 -04:00 [INF] Application Starting
+2021-08-23 12:49:58.756 -04:00 [WRN] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results.
+2021-08-23 12:49:58.762 -04:00 [WRN] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results.
