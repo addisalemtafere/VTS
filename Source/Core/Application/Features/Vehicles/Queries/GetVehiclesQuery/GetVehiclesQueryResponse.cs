@@ -16,6 +16,6 @@ namespace Application.Features.Vehicles.Queries.GetVehiclesQuery
         public int Count { get; set; }
         public int Page { get; set; }
         public int Size { get; set; }
-        public ICollection<VehicleDetailDto> Vehicles { get; set; }
+        public List<VehicleDetailDto> Vehicles { get; set; }
     }
 }

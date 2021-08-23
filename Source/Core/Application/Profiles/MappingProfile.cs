@@ -2,6 +2,7 @@
 using Application.Features.Locations.Queries.GetVehicleCurrentPosition;
 using Application.Features.TrackingDevices;
 using Application.Features.Vehicles.Commands.CreateVehicle;
+using Application.Features.Vehicles.Queries.GetVehiclesQuery;
 using AutoMapper;
 using Domain.Entities;
 
@@ -16,6 +17,7 @@ namespace Application.Profiles
             CreateMap<Location, CreateLocationDto>();
             CreateMap<Location, VehicleCurrentLocationDto>();
             CreateMap<Location, VehiclePositionDto>();
+            CreateMap<Vehicle, VehicleDetailDto>();
         }
     }
 }

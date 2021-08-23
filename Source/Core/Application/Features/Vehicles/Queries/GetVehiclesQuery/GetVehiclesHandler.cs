@@ -14,13 +14,13 @@ namespace Application.Features.Vehicles.Queries.GetVehiclesQuery
     public class GetVehiclesHandler : IRequestHandler<GetVehiclesQuery,
         GetVehiclesQueryResponse>
     {
-        private readonly IRepository<Vehicle> _repository;
+        private readonly IVehicleRepository _vehicleRepository;
         private readonly IMapper _mapper;
 
-        public GetVehiclesHandler(IRepository<Vehicle> repository,
+        public GetVehiclesHandler(IVehicleRepository vehicleRepository,
             IMapper mapper)
         {
-            _repository = repository;
+            _vehicleRepository = vehicleRepository;
             _mapper = mapper;
         }
 
@@ -28,7 +28,7 @@ namespace Application.Features.Vehicles.Queries.GetVehiclesQuery
             CancellationToken cancellationToken)
         {
             var vehiclesQueryResponse = new GetVehiclesQueryResponse();
-            var list = await _repository.GetPagedResponseAsync(request.Page, request.Size);
+            var list = await _vehicleRepository.GetPagedVehicle(request.Page, request.Size);
             var allVehicleDto = _mapper.Map<List<VehicleDetailDto>>(list);
 
             vehiclesQueryResponse.Vehicles = allVehicleDto;
