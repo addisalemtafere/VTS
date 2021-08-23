@@ -34,9 +34,9 @@ namespace Infrastructure.Persistence.DataProvider
             };
             var parameters = new DynamicParameters(dictionary);
             const string sql =
-                "Select top  * from [dbo].[locations] where VehicleId = @VehicleId and CreatedDate between @FromDate and @ToDate ";
+                "Select   * from [dbo].[locations] where VehicleId = @VehicleId and CreatedDate between @FromDate and @ToDate ";
 
-            var location = await connection.QueryAsync<List<VehicleCurrentLocationDto>>(sql, parameters);
+            var location = await connection.QueryAsync<VehiclePositionDto>(sql, parameters);
             return (List<VehiclePositionDto>) location;
         }
     }
