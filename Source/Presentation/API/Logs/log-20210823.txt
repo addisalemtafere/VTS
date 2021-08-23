@@ -725,3 +725,5 @@ System.InvalidOperationException: A path base can only be configured using IAppl
    at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.AddressBinder.BindAsync(IEnumerable`1 listenOptions, AddressBindContext context)
    at Microsoft.AspNetCore.Server.Kestrel.Core.KestrelServerImpl.BindAsync(CancellationToken cancellationToken)
    at Microsoft.AspNetCore.Server.Kestrel.Core.KestrelServerImpl.StartAsync[TContext](IHttpApplication`1 application, CancellationToken cancellationToken)
+2021-08-23 13:31:28.384 -04:00 [INF] Application Starting
+2021-08-23 13:33:53.794 -04:00 [INF] Application Starting
