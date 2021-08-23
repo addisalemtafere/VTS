@@ -16,7 +16,7 @@ namespace API.Controller
             _mediator = mediator;
         }
 
-        [HttpPost("registerVehicle", Name = "RegisterVehicle")]
+        [HttpPost("RegisterVehicle", Name = "RegisterVehicle")]
         public async Task<ActionResult<CreateVehicleCommandResponse>> Create(
             [FromBody] CreateVehicleCommand createVehicleCommand)
         {
