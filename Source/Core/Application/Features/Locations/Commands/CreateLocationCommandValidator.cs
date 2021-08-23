@@ -65,7 +65,7 @@ namespace Application.Features.Locations.Commands
         private async Task<bool> VehicleIsExist(CreateLocationCommand request, CancellationToken token)
         {
             var vehicle = _vehicleRepository.GetByIdAsync(request.VehicleId);
-            var isVehicleExist = (await vehicle) != null;
+            var isVehicleExist = await vehicle != null;
             return isVehicleExist;
         }
 

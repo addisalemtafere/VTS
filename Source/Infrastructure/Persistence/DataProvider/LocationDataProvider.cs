@@ -1,6 +1,6 @@
-﻿using System;
-using Application.Features.Locations.Queries.GetVehicleCurrentPosition;
+﻿using Application.Features.Locations.Queries.GetVehicleCurrentPosition;
 using Dapper;
+using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Threading.Tasks;
@@ -30,14 +30,14 @@ namespace Infrastructure.Persistence.DataProvider
             {
                 {"@VehicleId", VehicleId},
                 {"@FromDate", FromDate},
-                {"@ToDate", ToDate},
+                {"@ToDate", ToDate}
             };
             var parameters = new DynamicParameters(dictionary);
             const string sql =
                 "Select   * from [dbo].[locations] where VehicleId = @VehicleId and CreatedDate between @FromDate and @ToDate ";
 
             var location = await connection.QueryAsync<VehiclePositionDto>(sql, parameters);
-            return (List<VehiclePositionDto>) location;
+            return (List<VehiclePositionDto>)location;
         }
     }
 }

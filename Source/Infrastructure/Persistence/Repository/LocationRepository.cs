@@ -1,10 +1,10 @@
-﻿using System;
-using Application.Contracts.Repositories;
+﻿using Application.Contracts.Repositories;
 using Application.Features.Locations.Queries.GetVehicleCurrentPosition;
 using Domain.Entities;
 using Infrastructure.Persistence.DataProvider;
 using Persistence;
 using Persistence.Repository;
+using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 

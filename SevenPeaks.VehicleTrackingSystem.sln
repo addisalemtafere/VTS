@@ -22,6 +22,9 @@ EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "API", "Source\Presentation\API\API.csproj", "{BE607D30-5F87-459D-83B8-BD4E899765C2}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Docs", "Docs", "{E42620FA-B66C-4513-9C9A-1CE40615F7EA}"
+	ProjectSection(SolutionItems) = preProject
+		Docs\PostmanCollection\Seven Peaks VehicleTracking System API.postman_collection.json = Docs\PostmanCollection\Seven Peaks VehicleTracking System API.postman_collection.json
+	EndProjectSection
 EndProject
 Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{E89DDBB3-996D-43BF-B1B4-7A252608CC67}"
 EndProject

@@ -18,7 +18,6 @@ namespace API.Controller
     public class LocationController : ControllerBase
     {
         private readonly IMediator _mediator;
-        private readonly ILoggedInUserService _loggedInUserService;
 
         public LocationController(IMediator mediator,
             ILoggedInUserService loggedInUserService)

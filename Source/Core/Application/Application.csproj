@@ -21,7 +21,6 @@
     <ProjectReference Include="..\Domain\Domain.csproj" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Contracts\Common\" />
     <Folder Include="Features\Locations\" />
     <Folder Include="Features\Locations\Queries" />
     <Folder Include="Features\Vehicles\Queries\" />
