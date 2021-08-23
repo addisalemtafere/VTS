@@ -1,17 +1,14 @@
-﻿using Application.Features.Vehicles.Commands.CreateVehicle;
-using MediatR;
-using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Mvc;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using Application.Contracts;
 using Application.Features.Locations.Commands;
 using Application.Features.Locations.Queries.GetVehicleCurrentPosition;
 using Application.Features.Locations.Queries.GetVehiclePositionByDateQuery;
+using Application.Features.Vehicles.Commands.CreateVehicle;
+using MediatR;
 using Microsoft.AspNetCore.Authorization;
-using API.Services;
-using Application.Contracts;
+using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Mvc;
+using System;
+using System.Threading.Tasks;
 
 namespace API.Controller
 {
@@ -54,7 +51,6 @@ namespace API.Controller
         public async Task<ActionResult<GetVehiclePositionByDateQueryResponse>> GetVehiclePositionByDate(int VehicleId,
             DateTime FromDate, DateTime ToDate)
         {
-            var user = _loggedInUserService.UserId;
             var getPosition = new GetVehiclePositionByDateQuery()
             {
                 VehicleId = VehicleId,

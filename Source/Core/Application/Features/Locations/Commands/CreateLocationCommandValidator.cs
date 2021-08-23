@@ -1,10 +1,9 @@
-﻿using System;
+﻿using Application.Contracts;
+using Application.Contracts.Repositories;
+using FluentValidation;
+using System;
 using System.Threading;
 using System.Threading.Tasks;
-using Application.Contracts;
-using Application.Contracts.Repositories;
-using Application.Features.Vehicles.Commands.CreateVehicle;
-using FluentValidation;
 
 namespace Application.Features.Locations.Commands
 {
@@ -20,7 +19,6 @@ namespace Application.Features.Locations.Commands
             _vehicleRepository = vehicleRepository;
             _loggedInUserService = loggedInUserService;
 
-
             RuleFor(e => e)
                 .MustAsync(VehicleIsExist)
                 .WithMessage("An Vehicle with the  identity not found");
@@ -28,7 +26,6 @@ namespace Application.Features.Locations.Commands
             RuleFor(e => e)
                 .MustAsync(CheckUserCanAddOrUpdateLocation)
                 .WithMessage("User has no privilege to update or add vehicle position");
-
 
             RuleFor(p => p.Locality)
                 .NotEmpty().WithMessage("{PropertyName} is required.")
@@ -67,8 +64,8 @@ namespace Application.Features.Locations.Commands
 
         private async Task<bool> VehicleIsExist(CreateLocationCommand request, CancellationToken token)
         {
-            var vehicle = await _vehicleRepository.GetByIdAsync(request.VehicleId);
-            var isVehicleExist = vehicle != null ? true : false;
+            var vehicle = _vehicleRepository.GetByIdAsync(request.VehicleId);
+            var isVehicleExist = (await vehicle) != null;
             return isVehicleExist;
         }
 

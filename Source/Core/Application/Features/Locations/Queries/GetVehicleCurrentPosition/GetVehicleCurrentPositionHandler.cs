@@ -1,12 +1,12 @@
-﻿using System.Collections.Generic;
-using System.Threading;
-using System.Threading.Tasks;
-using Application.Contracts.Repositories;
-using Application.Features.Locations.Commands;
+﻿using Application.Contracts.Repositories;
+using Application.Contracts.Services.GoogleGeocodingService;
 using AutoMapper;
 using Domain.Entities;
 using GoogleMaps.LocationServices;
 using MediatR;
+using System.Collections.Generic;
+using System.Threading;
+using System.Threading.Tasks;
 
 namespace Application.Features.Locations.Queries.GetVehicleCurrentPosition
 {
@@ -15,15 +15,18 @@ namespace Application.Features.Locations.Queries.GetVehicleCurrentPosition
     {
         private readonly IRepository<Location> _repository;
         private readonly ILocationRepository _locationRepository;
+        private readonly IGeocodingService _geocodingService;
         private readonly IMapper _mapper;
 
         public GetVehicleCurrentPositionHandler(IRepository<Location> repository,
+            IGeocodingService geocodingService,
             ILocationRepository locationRepository,
             IMapper mapper)
         {
             _repository = repository;
             _locationRepository = locationRepository;
             _mapper = mapper;
+            _geocodingService = geocodingService;
         }
 
         public async Task<GetVehicleCurrentLocationQueryResponse> Handle(GetVehicleCurrentPositionQuery request,
@@ -42,27 +45,13 @@ namespace Application.Features.Locations.Queries.GetVehicleCurrentPosition
                     createLocationCommandResponse.ValidationErrors.Add(error.ErrorMessage);
             }
 
-            if (createLocationCommandResponse.Success)
-            {
-                var location = await _repository.GetByIdAsync(request.VehicleId);
-                var location2 = await _locationRepository.Get(request.VehicleId);
-                var gls = new GoogleLocationService();
-
-
-                var locationDto = _mapper.Map<VehicleCurrentLocationDto>(location);
-
-                try
-                {
-                    var adress3 = gls.GetRegionFromLatLong(locationDto.Latitude, locationDto.Longitude);
-                    var adress = gls.GetAddressFromLatLang(locationDto.Latitude, locationDto.Longitude).ToString();
-                }
-                catch (System.Exception ex)
-                {
-                    throw;
-                }
-
-                createLocationCommandResponse.CurrentLocation = locationDto;
-            }
+            if (!createLocationCommandResponse.Success) return createLocationCommandResponse;
+            var location = await _locationRepository.GetCurrentPositionVehicle(request.VehicleId);
+            var locationDto = _mapper.Map<VehicleCurrentLocationDto>(location);
+            var localityAddress =
+                _geocodingService.GetAddressLocationAsync(locationDto.Latitude, locationDto.Longitude);
+            locationDto.Locality = await localityAddress;
+            createLocationCommandResponse.CurrentLocation = locationDto;
 
             return createLocationCommandResponse;
         }

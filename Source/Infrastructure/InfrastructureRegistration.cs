@@ -1,5 +1,6 @@
 ﻿using Application.Contracts.Infrastructure;
 using Application.Contracts.Repositories;
+using Application.Contracts.Services.GoogleGeocodingService;
 using Application.Contracts.Services.Identity;
 using Application.Models.Authentication;
 using Application.Models.Email;
@@ -7,6 +8,7 @@ using Infrastructure.Mail;
 using Infrastructure.Models;
 using Infrastructure.Persistence;
 using Infrastructure.Persistence.Repository;
+using Infrastructure.Services.GoogleGeocodingService;
 using Infrastructure.Services.Identity;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Http;
@@ -29,6 +31,7 @@ namespace Infrastructure
             IConfiguration configuration)
         {
             services.Configure<EmailSettings>(configuration.GetSection("EmailSettings"));
+            services.Configure<GoogleSettings>(configuration.GetSection("GoogleSettings"));
 
             services.AddTransient<IEmailService, EmailService>();
 
@@ -38,7 +41,6 @@ namespace Infrastructure
             services.AddDbContext<VehicleTrackingSystemDbContext>(options => options.UseSqlServer(
                 configuration.GetConnectionString("VehicleTrackingSystemConnectionString"),
                 b => b.MigrationsAssembly(typeof(VehicleTrackingSystemDbContext).Assembly.FullName)));
-
 
             services.AddSingleton<ISqlConnectionFactory>(x =>
                 new SqlConnectionFactory(configuration.GetConnectionString("VehicleTrackingSystemConnectionString")));
@@ -106,7 +108,8 @@ namespace Infrastructure
             services.AddScoped(typeof(IRepository<>), typeof(BaseRepository<>));
             services.AddScoped<ITrackingDeviceRepository, TrackingDeviceRepository>();
             services.AddScoped<ILocationRepository, LocationRepository>();
-
+            services.AddScoped<IVehicleRepository, VehicleRepository>();
+            services.AddScoped<IGeocodingService, GeocodingService>();
 
             return services;
         }

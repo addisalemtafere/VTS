@@ -1,4 +1,5 @@
-﻿using Domain.Common;
+﻿using Application.Contracts;
+using Domain.Common;
 using Domain.Entities;
 using Infrastructure.Models;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
@@ -8,7 +9,6 @@ using System;
 using System.Reflection;
 using System.Threading;
 using System.Threading.Tasks;
-using Application.Contracts;
 
 namespace Persistence
 {

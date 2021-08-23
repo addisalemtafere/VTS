@@ -1,12 +1,12 @@
-﻿using System.Collections.Generic;
-using System.Threading;
-using System.Threading.Tasks;
-using Application.Contracts;
+﻿using Application.Contracts;
 using Application.Contracts.Repositories;
 using Application.Contracts.Services.Identity;
 using AutoMapper;
 using Domain.Entities;
 using MediatR;
+using System.Collections.Generic;
+using System.Threading;
+using System.Threading.Tasks;
 
 namespace Application.Features.Locations.Commands
 {
