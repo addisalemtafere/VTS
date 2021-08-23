@@ -43,10 +43,8 @@ namespace Application.Features.Locations.Queries.GetVehicleCurrentPosition
 
             if (createLocationCommandResponse.Success)
             {
-                var location = await _repository.GetByIdAsync(request.VehicleId);
-                var location2 = await _locationRepository.Get(request.VehicleId);
+                var location = await _locationRepository.GetCurrentPositonVehicle(request.VehicleId);
                 var gls = new GoogleLocationService();
-
                 var locationDto = _mapper.Map<VehicleCurrentLocationDto>(location);
 
                 try

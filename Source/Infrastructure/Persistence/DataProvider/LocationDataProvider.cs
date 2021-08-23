@@ -8,9 +8,17 @@ namespace Infrastructure.Persistence.DataProvider
 {
     public class LocationDataProvider
     {
-        public static async Task<VehicleCurrentLocationDto> GetVehicleLocation(IDbConnection connection)
+        public static async Task<VehicleCurrentLocationDto> GetVehicleLocation(IDbConnection connection, int vehicleId)
         {
-            var location = await connection.QueryAsync<VehicleCurrentLocationDto>("Select * from [dbo].[locations] ");
+            var dictionary = new Dictionary<string, object>
+            {
+                {"@VehicleId", vehicleId}
+            };
+            var parameters = new DynamicParameters(dictionary);
+            var sql = "Select top 1 * from [dbo].[locations] where vehicleId = @VehicleId ORDER BY CreatedTime ASC | DES";
+
+
+            var location = await connection.QueryAsync<VehicleCurrentLocationDto>(sql, parameters);
             return (VehicleCurrentLocationDto)location;
         }
 

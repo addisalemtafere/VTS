@@ -19,10 +19,10 @@ namespace Infrastructure.Persistence.Repository
             _sqlConnectionFactory = sqlConnectionFactory;
         }
 
-        public async Task<VehicleCurrentLocationDto> Get(int VehicleId)
+        public async Task<VehicleCurrentLocationDto> GetCurrentPositonVehicle(int VehicleId)
         {
             var locationResponse =
-                await LocationDataProvider.GetVehicleLocation(_sqlConnectionFactory.GetOpenConnection());
+                await LocationDataProvider.GetVehicleLocation(_sqlConnectionFactory.GetOpenConnection(), VehicleId);
             return locationResponse;
         }
 
