@@ -1,4 +1,5 @@
 ﻿using Application.Contracts.Repositories;
+using Application.Contracts.Services.GoogleGeocodingService;
 using AutoMapper;
 using Domain.Entities;
 using GoogleMaps.LocationServices;
@@ -14,15 +15,18 @@ namespace Application.Features.Locations.Queries.GetVehicleCurrentPosition
     {
         private readonly IRepository<Location> _repository;
         private readonly ILocationRepository _locationRepository;
+        private readonly IGeocodingService _geocodingService;
         private readonly IMapper _mapper;
 
         public GetVehicleCurrentPositionHandler(IRepository<Location> repository,
+            IGeocodingService geocodingService,
             ILocationRepository locationRepository,
             IMapper mapper)
         {
             _repository = repository;
             _locationRepository = locationRepository;
             _mapper = mapper;
+            _geocodingService = geocodingService;
         }
 
         public async Task<GetVehicleCurrentLocationQueryResponse> Handle(GetVehicleCurrentPositionQuery request,
@@ -44,19 +48,9 @@ namespace Application.Features.Locations.Queries.GetVehicleCurrentPosition
             if (createLocationCommandResponse.Success)
             {
                 var location = await _locationRepository.GetCurrentPositonVehicle(request.VehicleId);
-                var gls = new GoogleLocationService();
                 var locationDto = _mapper.Map<VehicleCurrentLocationDto>(location);
-
-                try
-                {
-                    var adress3 = gls.GetRegionFromLatLong(locationDto.Latitude, locationDto.Longitude);
-                    var adress = gls.GetAddressFromLatLang(locationDto.Latitude, locationDto.Longitude).ToString();
-                }
-                catch (System.Exception ex)
-                {
-                    throw;
-                }
-
+                var localityAddress = _geocodingService.GetAddressLocationAsync(locationDto.Latitude, locationDto.Longitude);
+                locationDto.Locality = await localityAddress;
                 createLocationCommandResponse.CurrentLocation = locationDto;
             }
 

@@ -15,11 +15,10 @@ namespace Infrastructure.Persistence.DataProvider
                 {"@VehicleId", vehicleId}
             };
             var parameters = new DynamicParameters(dictionary);
-            var sql = "Select top 1 * from [dbo].[locations] where vehicleId = @VehicleId ORDER BY CreatedTime ASC | DES";
+            var sql = "Select top 1 * from [dbo].[locations] where vehicleId = @VehicleId ORDER BY CreatedDate  DESC";
 
-
-            var location = await connection.QueryAsync<VehicleCurrentLocationDto>(sql, parameters);
-            return (VehicleCurrentLocationDto)location;
+            var location = await connection.QuerySingleAsync<VehicleCurrentLocationDto>(sql, parameters);
+            return location;
         }
 
         public static async Task<List<VehiclePositionDto>> GetVehicleLocationByDate(IDbConnection connection)

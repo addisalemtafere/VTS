@@ -532,3 +532,96 @@ System.InvalidOperationException: Headers are read-only, response has already st
    at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpProtocol.ProcessRequests[TContext](IHttpApplication`1 application)
 2021-08-23 04:48:46.035 -04:00 [INF] Application Starting
 2021-08-23 04:55:40.263 -04:00 [INF] Application Starting
+2021-08-23 05:46:42.962 -04:00 [INF] Application Starting
+2021-08-23 05:47:02.004 -04:00 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: Headers are read-only, response has already started.
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpHeaders.ThrowHeadersReadOnlyException()
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpHeaders.Microsoft.AspNetCore.Http.IHeaderDictionary.set_Item(String key, StringValues value)
+   at Microsoft.AspNetCore.Http.DefaultHttpResponse.set_ContentType(String value)
+   at API.Middleware.ExceptionHandlerMiddleware.ConvertException(HttpContext context, Exception exception) in D:\projects\seven-peek\Final\SevenPeaks.VehicleTrackingSystem\Source\Presentation\API\Middleware\ExceptionHandlerMiddleware.cs:line 35
+   at API.Middleware.ExceptionHandlerMiddleware.Invoke(HttpContext context) in D:\projects\seven-peek\Final\SevenPeaks.VehicleTrackingSystem\Source\Presentation\API\Middleware\ExceptionHandlerMiddleware.cs:line 27
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2021-08-23 05:47:02.040 -04:00 [WRN] The response has already started, the error page middleware will not be executed.
+2021-08-23 05:47:02.044 -04:00 [ERR] Connection id "0HMB63BL8CLVO", Request id "0HMB63BL8CLVO:00000002": An unhandled exception was thrown by the application.
+System.InvalidOperationException: Headers are read-only, response has already started.
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpHeaders.ThrowHeadersReadOnlyException()
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpHeaders.Microsoft.AspNetCore.Http.IHeaderDictionary.set_Item(String key, StringValues value)
+   at Microsoft.AspNetCore.Http.DefaultHttpResponse.set_ContentType(String value)
+   at API.Middleware.ExceptionHandlerMiddleware.ConvertException(HttpContext context, Exception exception) in D:\projects\seven-peek\Final\SevenPeaks.VehicleTrackingSystem\Source\Presentation\API\Middleware\ExceptionHandlerMiddleware.cs:line 35
+   at API.Middleware.ExceptionHandlerMiddleware.Invoke(HttpContext context) in D:\projects\seven-peek\Final\SevenPeaks.VehicleTrackingSystem\Source\Presentation\API\Middleware\ExceptionHandlerMiddleware.cs:line 27
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpProtocol.ProcessRequests[TContext](IHttpApplication`1 application)
+2021-08-23 05:51:15.877 -04:00 [INF] Application Starting
+2021-08-23 05:55:09.033 -04:00 [INF] Application Starting
+2021-08-23 05:58:03.568 -04:00 [INF] Application Starting
+2021-08-23 06:57:07.005 -04:00 [INF] Application Starting
+2021-08-23 06:57:46.978 -04:00 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: Headers are read-only, response has already started.
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpHeaders.ThrowHeadersReadOnlyException()
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpHeaders.Microsoft.AspNetCore.Http.IHeaderDictionary.set_Item(String key, StringValues value)
+   at Microsoft.AspNetCore.Http.DefaultHttpResponse.set_ContentType(String value)
+   at API.Middleware.ExceptionHandlerMiddleware.ConvertException(HttpContext context, Exception exception) in D:\projects\seven-peek\Final\SevenPeaks.VehicleTrackingSystem\Source\Presentation\API\Middleware\ExceptionHandlerMiddleware.cs:line 35
+   at API.Middleware.ExceptionHandlerMiddleware.Invoke(HttpContext context) in D:\projects\seven-peek\Final\SevenPeaks.VehicleTrackingSystem\Source\Presentation\API\Middleware\ExceptionHandlerMiddleware.cs:line 27
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2021-08-23 06:57:47.020 -04:00 [WRN] The response has already started, the error page middleware will not be executed.
+2021-08-23 06:57:47.026 -04:00 [ERR] Connection id "0HMB64J03U59B", Request id "0HMB64J03U59B:00000002": An unhandled exception was thrown by the application.
+System.InvalidOperationException: Headers are read-only, response has already started.
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpHeaders.ThrowHeadersReadOnlyException()
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpHeaders.Microsoft.AspNetCore.Http.IHeaderDictionary.set_Item(String key, StringValues value)
+   at Microsoft.AspNetCore.Http.DefaultHttpResponse.set_ContentType(String value)
+   at API.Middleware.ExceptionHandlerMiddleware.ConvertException(HttpContext context, Exception exception) in D:\projects\seven-peek\Final\SevenPeaks.VehicleTrackingSystem\Source\Presentation\API\Middleware\ExceptionHandlerMiddleware.cs:line 35
+   at API.Middleware.ExceptionHandlerMiddleware.Invoke(HttpContext context) in D:\projects\seven-peek\Final\SevenPeaks.VehicleTrackingSystem\Source\Presentation\API\Middleware\ExceptionHandlerMiddleware.cs:line 27
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpProtocol.ProcessRequests[TContext](IHttpApplication`1 application)
+2021-08-23 06:58:49.818 -04:00 [INF] Application Starting
+2021-08-23 06:59:38.498 -04:00 [INF] Application Starting
+2021-08-23 07:02:05.015 -04:00 [INF] Application Starting
+2021-08-23 07:02:55.633 -04:00 [INF] Application Starting
+2021-08-23 07:06:12.822 -04:00 [INF] Application Starting
+2021-08-23 07:07:35.295 -04:00 [INF] Application Starting
+2021-08-23 07:30:48.750 -04:00 [INF] Application Starting
+2021-08-23 07:38:30.931 -04:00 [INF] Application Starting
+2021-08-23 07:39:37.295 -04:00 [INF] Application Starting
+2021-08-23 08:06:05.951 -04:00 [INF] Application Starting
+2021-08-23 08:06:24.775 -04:00 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: Headers are read-only, response has already started.
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpHeaders.ThrowHeadersReadOnlyException()
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpHeaders.Microsoft.AspNetCore.Http.IHeaderDictionary.set_Item(String key, StringValues value)
+   at Microsoft.AspNetCore.Http.DefaultHttpResponse.set_ContentType(String value)
+   at API.Middleware.ExceptionHandlerMiddleware.ConvertException(HttpContext context, Exception exception) in D:\projects\seven-peek\Final\SevenPeaks.VehicleTrackingSystem\Source\Presentation\API\Middleware\ExceptionHandlerMiddleware.cs:line 35
+   at API.Middleware.ExceptionHandlerMiddleware.Invoke(HttpContext context) in D:\projects\seven-peek\Final\SevenPeaks.VehicleTrackingSystem\Source\Presentation\API\Middleware\ExceptionHandlerMiddleware.cs:line 27
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2021-08-23 08:06:24.812 -04:00 [WRN] The response has already started, the error page middleware will not be executed.
+2021-08-23 08:06:24.816 -04:00 [ERR] Connection id "0HMB65PHL48NS", Request id "0HMB65PHL48NS:00000002": An unhandled exception was thrown by the application.
+System.InvalidOperationException: Headers are read-only, response has already started.
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpHeaders.ThrowHeadersReadOnlyException()
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpHeaders.Microsoft.AspNetCore.Http.IHeaderDictionary.set_Item(String key, StringValues value)
+   at Microsoft.AspNetCore.Http.DefaultHttpResponse.set_ContentType(String value)
+   at API.Middleware.ExceptionHandlerMiddleware.ConvertException(HttpContext context, Exception exception) in D:\projects\seven-peek\Final\SevenPeaks.VehicleTrackingSystem\Source\Presentation\API\Middleware\ExceptionHandlerMiddleware.cs:line 35
+   at API.Middleware.ExceptionHandlerMiddleware.Invoke(HttpContext context) in D:\projects\seven-peek\Final\SevenPeaks.VehicleTrackingSystem\Source\Presentation\API\Middleware\ExceptionHandlerMiddleware.cs:line 27
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpProtocol.ProcessRequests[TContext](IHttpApplication`1 application)
+2021-08-23 08:41:27.493 -04:00 [INF] Application Starting
+2021-08-23 08:46:17.728 -04:00 [INF] Application Starting
+2021-08-23 08:52:57.405 -04:00 [INF] Application Starting
