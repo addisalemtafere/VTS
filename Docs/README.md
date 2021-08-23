@@ -1,4 +1,4 @@
-**SevenPeaks VTS Coding Challenge**
+**GiG Coding Challenge**
 
 
 I have used Clean Architecture for this POC, and here is how it is organized.
@@ -41,8 +41,8 @@ docker-compose -f docker-compose.yml -f docker-compose.override.yml up -d
 
  You can use:
 
-* **VTS API -> http://localhost:8000/swagger/index.html**
-* **SQL Server in Visual Studio Server Explorer-> localhost**   -- User Id => sa password => SwN12345678
+* **VTS API -> http://host.docker.internal:8000/swagger/index.html**
+* **SQL Server -> http://host.docker.internal:5050**   -- admin@vts.com password => admin1234**
 
 
 Thank you.
