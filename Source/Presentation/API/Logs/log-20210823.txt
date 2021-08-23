@@ -728,3 +728,4 @@ System.InvalidOperationException: A path base can only be configured using IAppl
 2021-08-23 13:31:28.384 -04:00 [INF] Application Starting
 2021-08-23 13:33:53.794 -04:00 [INF] Application Starting
 2021-08-23 13:35:34.083 -04:00 [INF] Application Starting
+2021-08-23 13:43:03.004 -04:00 [INF] Application Starting

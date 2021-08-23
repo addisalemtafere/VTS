@@ -35,12 +35,6 @@ namespace Infrastructure.Migrations
                     b.Property<DateTime>("CreatedDate")
                         .HasColumnType("datetime2");
 
-                    b.Property<DateTime>("CreatedTime")
-                        .HasColumnType("datetime2");
-
-                    b.Property<double>("HorizontalAccuracy")
-                        .HasColumnType("float");
-
                     b.Property<double>("Latitude")
                         .HasColumnType("float");
 
@@ -53,14 +47,8 @@ namespace Infrastructure.Migrations
                     b.Property<DateTime?>("ModifiedDate")
                         .HasColumnType("datetime2");
 
-                    b.Property<double>("Speed")
-                        .HasColumnType("float");
-
                     b.Property<int>("VehicleId")
                         .HasColumnType("int");
-
-                    b.Property<double>("VerticalAccuracy")
-                        .HasColumnType("float");
 
                     b.HasKey("Id");
 
