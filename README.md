@@ -41,8 +41,8 @@ docker-compose -f docker-compose.yml -f docker-compose.override.yml up -d
 
  You can use:
 
-* **VTS API -> http://host.docker.internal:8000/swagger/index.html**
-* **SQL Server -> http://host.docker.internal:5050**   -- admin@vts.com password => admin1234**
+* **VTS API -> http://localhost:8000/swagger/index.html**
+* **SQL Server in Visual Studio Server Explorer-> localhost:5050**   -- User Name => sa password => SwN12345678
 
 
 Thank you.
