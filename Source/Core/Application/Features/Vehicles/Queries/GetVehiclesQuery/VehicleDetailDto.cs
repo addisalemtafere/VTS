@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Application.Features.TrackingDevices;
 
 namespace Application.Features.Vehicles.Queries.GetVehiclesQuery
 {
@@ -25,5 +24,13 @@ namespace Application.Features.Vehicles.Queries.GetVehiclesQuery
     {
         Car,
         Truck
+    }
+
+    public class TrackingDeviceVM
+    {
+        public int TrackingDeviceId { get; set; }
+        public Guid Imei { get; set; }
+        public string Name { get; set; }
+        public bool Status { get; set; }
     }
 }
