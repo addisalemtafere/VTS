@@ -6,7 +6,7 @@ namespace Application.Features.Vehicles.Commands.CreateVehicle
 {
     public class CreateVehicleCommand : IRequest<CreateVehicleCommandResponse>
     {
-        public int VehicleId { get; set; }
+        //public int VehicleId { get; set; }
         public string VehicleName { get; set; }
         public string Maker { get; set; }
         public string Model { get; set; }

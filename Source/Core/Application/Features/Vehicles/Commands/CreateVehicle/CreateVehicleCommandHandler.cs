@@ -12,7 +12,7 @@ namespace Application.Features.Vehicles.Commands.CreateVehicle
 {
     public class CreateVehicleCommandHandler : IRequestHandler<CreateVehicleCommand, CreateVehicleCommandResponse>
     {
-        private readonly IRepository<Vehicle> _categoryRepository;
+        private readonly IRepository<Vehicle> _vehicleRepository;
         private readonly ITrackingDeviceRepository _trackingDeviceRepository;
         private readonly IMapper _mapper;
         private readonly IAuthenticationService _authenticationService;
@@ -23,7 +23,7 @@ namespace Application.Features.Vehicles.Commands.CreateVehicle
             IAuthenticationService authenticationService)
         {
             _mapper = mapper;
-            _categoryRepository = vehicleRepository;
+            _vehicleRepository = vehicleRepository;
             _authenticationService = authenticationService;
             _trackingDeviceRepository = trackingDeviceRepository;
         }
@@ -66,7 +66,7 @@ namespace Application.Features.Vehicles.Commands.CreateVehicle
                     TrackingDeviceStatus = request.Status
                 };
                 vehicle.TrackingDevice = trackerRequest;
-                vehicle = await _categoryRepository.AddAsync(vehicle);
+                vehicle = await _vehicleRepository.AddAsync(vehicle);
                 createVehicleCommandResponse.Vehicle = _mapper.Map<CreateVehicleDto>(vehicle);
             }
 

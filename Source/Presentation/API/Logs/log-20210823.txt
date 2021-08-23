@@ -729,3 +729,25 @@ System.InvalidOperationException: A path base can only be configured using IAppl
 2021-08-23 13:33:53.794 -04:00 [INF] Application Starting
 2021-08-23 13:35:34.083 -04:00 [INF] Application Starting
 2021-08-23 13:43:03.004 -04:00 [INF] Application Starting
+2021-08-23 13:44:01.553 -04:00 [INF] Application Starting
+2021-08-23 13:58:47.154 -04:00 [INF] Application Starting
+2021-08-23 14:56:00.262 -04:00 [INF] Application Starting
+2021-08-23 14:57:01.755 -04:00 [INF] Application Starting
+2021-08-23 14:59:39.076 -04:00 [INF] Application Starting
+2021-08-23 15:00:55.069 -04:00 [WRN] An error occured while starting the application
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at Infrastructure.Seed.UserCreator.SeedAsync(UserManager`1 userManager, IRepository`1 repository) in D:\projects\seven-peek\Final\SevenPeaks.VehicleTrackingSystem\Source\Infrastructure\Seed\CreateFirstUser.cs:line 28
+   at API.Program.Main(String[] args) in D:\projects\seven-peek\Final\SevenPeaks.VehicleTrackingSystem\Source\Presentation\API\Program.cs:line 41
+2021-08-23 15:04:23.369 -04:00 [INF] Application Starting
+2021-08-23 15:23:41.350 -04:00 [INF] Application Starting
+2021-08-23 15:26:56.057 -04:00 [WRN] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results.
+2021-08-23 15:26:56.063 -04:00 [WRN] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results.
+2021-08-23 15:29:17.287 -04:00 [INF] Application Starting
+2021-08-23 15:29:31.106 -04:00 [WRN] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results.
+2021-08-23 15:29:31.119 -04:00 [WRN] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results.
+2021-08-23 15:31:16.952 -04:00 [WRN] User password validation failed: PasswordRequiresDigit;PasswordRequiresUpper.
+2021-08-23 15:40:52.087 -04:00 [INF] Application Starting
+2021-08-23 15:43:37.069 -04:00 [INF] Application Starting
+2021-08-23 15:51:45.584 -04:00 [INF] Application Starting
+2021-08-23 15:53:26.245 -04:00 [WRN] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results.
+2021-08-23 15:53:26.253 -04:00 [WRN] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results.

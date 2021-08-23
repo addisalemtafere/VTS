@@ -26,10 +26,7 @@ namespace Application.Features.Locations.Commands
                 .MustAsync(CheckUserCanAddOrUpdateLocation)
                 .WithMessage("User has no privilege to update or add vehicle position");
 
-            RuleFor(p => p.Locality)
-                .NotEmpty().WithMessage("{PropertyName} is required.")
-                .NotNull()
-                .MaximumLength(50).WithMessage("{PropertyName} must not exceed 50 characters.");
+           
 
             RuleFor(p => p.Altitude)
                 .NotEmpty().WithMessage("{PropertyName} is required")

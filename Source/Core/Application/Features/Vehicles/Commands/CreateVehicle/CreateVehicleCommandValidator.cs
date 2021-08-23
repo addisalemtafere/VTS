@@ -20,7 +20,7 @@ namespace Application.Features.Vehicles.Commands.CreateVehicle
 
             RuleFor(e => e)
                 .MustAsync(VehicleTrackerDeviceUnique)
-                .WithMessage("An Vehicle with the same identity and date already exists.");
+                .WithMessage("A Vehicle with the same identity already exists.");
         }
 
         private async Task<bool> VehicleTrackerDeviceUnique(CreateVehicleCommand request, CancellationToken token)

@@ -2,7 +2,7 @@
 {
     public class CreateVehicleDto
     {
-        public int VehicleId { get; set; }
+        public int Id { get; set; }
         public string Name { get; set; }
     }
 }

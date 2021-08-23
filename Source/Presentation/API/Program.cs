@@ -8,6 +8,8 @@ using Microsoft.Extensions.Logging;
 using Serilog;
 using System;
 using System.Threading.Tasks;
+using Application.Contracts.Repositories;
+using Domain.Entities;
 
 namespace API
 {
@@ -34,8 +36,9 @@ namespace API
                 try
                 {
                     var userManager = services.GetRequiredService<UserManager<ApplicationUser>>();
+                    var Vehicle = services.GetRequiredService<IRepository<Vehicle>>();
 
-                    await Infrastructure.Seed.UserCreator.SeedAsync(userManager);
+                    await Infrastructure.Seed.UserCreator.SeedAsync(userManager, Vehicle);
                     Log.Information("Application Starting");
                 }
                 catch (Exception ex)
