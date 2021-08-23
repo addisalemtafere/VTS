@@ -10,10 +10,9 @@ namespace Infrastructure.Seed
         {
             var applicationUser = new ApplicationUser
             {
-                FirstName = "John",
-                LastName = "Smith",
-                UserName = "johnsmith",
-                Email = "john@test.com",
+                Name = "Addisalem",
+                UserName = "addis",
+                Email = "addisalem12@gmail.com",
                 EmailConfirmed = true
             };
 

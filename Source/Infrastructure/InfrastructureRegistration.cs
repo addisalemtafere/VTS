@@ -1,9 +1,12 @@
 ﻿using Application.Contracts.Infrastructure;
+using Application.Contracts.Repositories;
 using Application.Contracts.Services.Identity;
 using Application.Models.Authentication;
 using Application.Models.Email;
 using Infrastructure.Mail;
 using Infrastructure.Models;
+using Infrastructure.Persistence;
+using Infrastructure.Persistence.Repository;
 using Infrastructure.Services.Identity;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Http;
@@ -17,7 +20,6 @@ using Persistence;
 using Persistence.Repository;
 using System;
 using System.Text;
-using Application.Contracts.Repositories;
 
 namespace Infrastructure
 {
@@ -34,8 +36,12 @@ namespace Infrastructure
             services.Configure<JwtSettings>(configuration.GetSection("JwtSettings"));
 
             services.AddDbContext<VehicleTrackingSystemDbContext>(options => options.UseSqlServer(
-                configuration.GetConnectionString("GloboTicketIdentityConnectionString"),
+                configuration.GetConnectionString("VehicleTrackingSystemConnectionString"),
                 b => b.MigrationsAssembly(typeof(VehicleTrackingSystemDbContext).Assembly.FullName)));
+
+
+            services.AddSingleton<ISqlConnectionFactory>(x =>
+                new SqlConnectionFactory(configuration.GetConnectionString("VehicleTrackingSystemConnectionString")));
 
             services.AddIdentity<ApplicationUser, IdentityRole>()
                 .AddEntityFrameworkStores<VehicleTrackingSystemDbContext>().AddDefaultTokenProviders();
@@ -94,14 +100,13 @@ namespace Infrastructure
 
             //start persistance
             services.AddDbContext<VehicleTrackingSystemDbContext>(options =>
-                options.UseSqlServer(configuration.GetConnectionString("GloboTicketTicketManagementConnectionString")));
+                options.UseSqlServer(
+                    configuration.GetConnectionString("VehicleTrackingSystemIdentityConnectionString")));
 
             services.AddScoped(typeof(IRepository<>), typeof(BaseRepository<>));
+            services.AddScoped<ITrackingDeviceRepository, TrackingDeviceRepository>();
+            services.AddScoped<ILocationRepository, LocationRepository>();
 
-            //services.AddScoped<ICategoryRepository, CategoryRepository>();
-            //services.AddScoped<IEventRepository, EventRepository>();
-            //services.AddScoped<IOrderRepository, OrderRepository>();
-            //end
 
             return services;
         }

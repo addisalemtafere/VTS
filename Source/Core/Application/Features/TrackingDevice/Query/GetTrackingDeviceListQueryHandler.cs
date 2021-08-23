@@ -1,11 +1,11 @@
-﻿using Application.Features.Devices.Query;
+﻿using Application.Contracts.Repositories;
+using Application.Features.Devices.Query;
 using AutoMapper;
 using Domain.Entities;
 using MediatR;
 using System.Collections.Generic;
 using System.Threading;
 using System.Threading.Tasks;
-using Application.Contracts.Repositories;
 
 namespace Application.Features.TrackingDevices.Query
 {

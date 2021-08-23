@@ -1,14 +1,16 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using Application.Contracts.Repositories;
+using Microsoft.EntityFrameworkCore;
+using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Linq.Expressions;
 using System.Threading.Tasks;
-using Application.Contracts.Repositories;
 
 namespace Persistence.Repository
 {
     public class BaseRepository<T> : IRepository<T> where T : class
     {
-        private readonly VehicleTrackingSystemDbContext _vtsDbContext;
+        protected readonly VehicleTrackingSystemDbContext _vtsDbContext;
 
         public BaseRepository(VehicleTrackingSystemDbContext vtsDbContext)
         {
@@ -47,6 +49,11 @@ namespace Persistence.Repository
         public async Task<IReadOnlyList<T>> GetPagedResponseAsync(int page, int size)
         {
             return await _vtsDbContext.Set<T>().Skip((page - 1) * size).Take(size).AsNoTracking().ToListAsync();
+        }
+
+        public IEnumerable<T> Get(Expression<Func<T, bool>> predicate)
+        {
+            return _vtsDbContext.Set<T>().Where(predicate).AsEnumerable<T>();
         }
     }
 }

@@ -14,6 +14,7 @@
     <PackageReference Include="AutoMapper" Version="10.1.1" />
     <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="8.1.1" />
     <PackageReference Include="FluentValidation" Version="10.3.0" />
+    <PackageReference Include="GoogleMaps.LocationServices" Version="1.2.0.5" />
     <PackageReference Include="MediatR.Extensions.Microsoft.DependencyInjection" Version="9.0.0" />
   </ItemGroup>
   <ItemGroup>
@@ -21,8 +22,9 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Contracts\Common\" />
-    <Folder Include="Features\Location\" />
-    <Folder Include="Features\Vehicle\" />
+    <Folder Include="Features\Locations\" />
+    <Folder Include="Features\Locations\Queries" />
+    <Folder Include="Features\Vehicles\Queries\" />
   </ItemGroup>
 
 </Project>

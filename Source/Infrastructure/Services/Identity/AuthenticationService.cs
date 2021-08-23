@@ -61,8 +61,7 @@ namespace Infrastructure.Services.Identity
             var user = new ApplicationUser
             {
                 Email = request.Email,
-                FirstName = request.FirstName,
-                LastName = request.LastName,
+                Name = request.Name,
                 UserName = request.UserName,
                 EmailConfirmed = true
             };
@@ -95,10 +94,10 @@ namespace Infrastructure.Services.Identity
 
             var claims = new[]
                 {
+                    new Claim("uid", user.Id),
                     new Claim(JwtRegisteredClaimNames.Sub, user.UserName),
                     new Claim(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString()),
-                    new Claim(JwtRegisteredClaimNames.Email, user.Email),
-                    new Claim("uid", user.Id)
+                    new Claim(JwtRegisteredClaimNames.Email, user.Email)
                 }
                 .Union(userClaims)
                 .Union(roleClaims);

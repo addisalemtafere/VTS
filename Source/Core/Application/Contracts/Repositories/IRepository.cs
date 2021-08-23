@@ -1,4 +1,6 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq.Expressions;
 using System.Threading.Tasks;
 
 namespace Application.Contracts.Repositories
@@ -16,5 +18,7 @@ namespace Application.Contracts.Repositories
         Task DeleteAsync(T entity);
 
         Task<IReadOnlyList<T>> GetPagedResponseAsync(int page, int size);
+
+        IEnumerable<T> Get(Expression<Func<T, bool>> predicate);
     }
 }
