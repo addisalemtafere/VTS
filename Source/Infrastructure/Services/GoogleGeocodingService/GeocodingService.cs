@@ -1,4 +1,6 @@
 ﻿using Application.Contracts.Services.GoogleGeocodingService;
+using Infrastructure.Models;
+using Microsoft.Extensions.Options;
 using Newtonsoft.Json;
 using System.Collections.Generic;
 using System.Net.Http;
@@ -8,12 +10,19 @@ namespace Infrastructure.Services.GoogleGeocodingService
 {
     public class GeocodingService : IGeocodingService
     {
+
+        public GoogleSettings _googleSettings;
+
+        public GeocodingService(IOptions<GoogleSettings> googleSettings)
+        {
+            _googleSettings = googleSettings.Value;
+        }
         public async Task<string> GetAddressLocationAsync(double lat, double lang)
         {
             var httpClient = new HttpClient();
-            var response = httpClient.GetAsync($"https://us1.locationiq.com/v1/reverse.php?key=pk.2265917474aca329f57a03d55d64451b&lat={lat}&lon={lang}&format=json").Result;
+            var response = await httpClient.GetAsync($"{_googleSettings.BaseUrl}?key={_googleSettings.ApiKey}&lat={lat}&lon={lang}&format=json");
             var contents = await response.Content.ReadAsStringAsync();
-            var result =  JsonConvert.DeserializeObject<Locality>(contents).display_name;
+            var result = JsonConvert.DeserializeObject<Locality>(contents).display_name;
             return result;
 
 

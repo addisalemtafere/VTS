@@ -43,7 +43,8 @@ namespace Application.Features.Locations.Queries.GetVehiclePositionByDateQuery
 
             if (createLocationCommandResponse.Success)
             {
-                var locationResponse = await _locationRepository.GetByDate(request.VehicleId);
+                var locationResponse =
+                    await _locationRepository.GetByDate(request.VehicleId, request.FromDate, request.ToDate);
 
                 var locationDto = _mapper.Map<List<VehiclePositionDto>>(locationResponse);
 

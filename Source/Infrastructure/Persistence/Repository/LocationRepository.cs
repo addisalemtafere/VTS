@@ -1,4 +1,5 @@
-﻿using Application.Contracts.Repositories;
+﻿using System;
+using Application.Contracts.Repositories;
 using Application.Features.Locations.Queries.GetVehicleCurrentPosition;
 using Domain.Entities;
 using Infrastructure.Persistence.DataProvider;
@@ -26,10 +27,11 @@ namespace Infrastructure.Persistence.Repository
             return locationResponse;
         }
 
-        public async Task<List<VehiclePositionDto>> GetByDate(int VehicleId)
+        public async Task<List<VehiclePositionDto>> GetByDate(int VehicleId, DateTime FromDate, DateTime ToDate)
         {
             var locationResponse =
-                await LocationDataProvider.GetVehicleLocationByDate(_sqlConnectionFactory.GetOpenConnection());
+                await LocationDataProvider.GetVehicleLocationByDate(_sqlConnectionFactory.GetOpenConnection(),
+                    VehicleId, FromDate, ToDate);
             return locationResponse;
         }
     }

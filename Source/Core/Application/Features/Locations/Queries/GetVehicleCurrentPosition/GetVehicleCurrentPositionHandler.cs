@@ -45,14 +45,13 @@ namespace Application.Features.Locations.Queries.GetVehicleCurrentPosition
                     createLocationCommandResponse.ValidationErrors.Add(error.ErrorMessage);
             }
 
-            if (createLocationCommandResponse.Success)
-            {
-                var location = await _locationRepository.GetCurrentPositonVehicle(request.VehicleId);
-                var locationDto = _mapper.Map<VehicleCurrentLocationDto>(location);
-                var localityAddress = _geocodingService.GetAddressLocationAsync(locationDto.Latitude, locationDto.Longitude);
-                locationDto.Locality = await localityAddress;
-                createLocationCommandResponse.CurrentLocation = locationDto;
-            }
+            if (!createLocationCommandResponse.Success) return createLocationCommandResponse;
+            var location = await _locationRepository.GetCurrentPositonVehicle(request.VehicleId);
+            var locationDto = _mapper.Map<VehicleCurrentLocationDto>(location);
+            var localityAddress =
+                _geocodingService.GetAddressLocationAsync(locationDto.Latitude, locationDto.Longitude);
+            locationDto.Locality = await localityAddress;
+            createLocationCommandResponse.CurrentLocation = locationDto;
 
             return createLocationCommandResponse;
         }

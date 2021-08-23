@@ -31,6 +31,7 @@ namespace Infrastructure
             IConfiguration configuration)
         {
             services.Configure<EmailSettings>(configuration.GetSection("EmailSettings"));
+            services.Configure<GoogleSettings>(configuration.GetSection("GoogleSettings"));
 
             services.AddTransient<IEmailService, EmailService>();
 

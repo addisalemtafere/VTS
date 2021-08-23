@@ -1,4 +1,5 @@
-﻿using Application.Features.Locations.Queries.GetVehicleCurrentPosition;
+﻿using System;
+using Application.Features.Locations.Queries.GetVehicleCurrentPosition;
 using Dapper;
 using System.Collections.Generic;
 using System.Data;
@@ -15,16 +16,28 @@ namespace Infrastructure.Persistence.DataProvider
                 {"@VehicleId", vehicleId}
             };
             var parameters = new DynamicParameters(dictionary);
-            var sql = "Select top 1 * from [dbo].[locations] where vehicleId = @VehicleId ORDER BY CreatedDate  DESC";
+            const string sql =
+                "Select top 1 * from [dbo].[locations] where vehicleId = @VehicleId ORDER BY CreatedDate  DESC";
 
             var location = await connection.QuerySingleAsync<VehicleCurrentLocationDto>(sql, parameters);
             return location;
         }
 
-        public static async Task<List<VehiclePositionDto>> GetVehicleLocationByDate(IDbConnection connection)
+        public static async Task<List<VehiclePositionDto>> GetVehicleLocationByDate(IDbConnection connection,
+            int VehicleId, DateTime FromDate, DateTime ToDate)
         {
-            var location = await connection.QueryAsync<VehiclePositionDto>("Select * from [dbo].[locations] ");
-            return (List<VehiclePositionDto>)location;
+            var dictionary = new Dictionary<string, object>
+            {
+                {"@VehicleId", VehicleId},
+                {"@FromDate", FromDate},
+                {"@ToDate", ToDate},
+            };
+            var parameters = new DynamicParameters(dictionary);
+            const string sql =
+                "Select top  * from [dbo].[locations] where VehicleId = @VehicleId and CreatedDate between @FromDate and @ToDate ";
+
+            var location = await connection.QueryAsync<List<VehicleCurrentLocationDto>>(sql, parameters);
+            return (List<VehiclePositionDto>) location;
         }
     }
 }

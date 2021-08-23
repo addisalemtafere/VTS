@@ -40,7 +40,7 @@ namespace API.Controller
         [ProducesDefaultResponseType]
         public async Task<ActionResult<GetVehicleCurrentLocationQueryResponse>> GetVehicleCurrentPosition(int VehicleId)
         {
-            var getCurrentPosition = new GetVehicleCurrentPositionQuery() { VehicleId = VehicleId };
+            var getCurrentPosition = new GetVehicleCurrentPositionQuery() {VehicleId = VehicleId};
             var vehiclePosition = await _mediator.Send(getCurrentPosition);
             return Ok(vehiclePosition);
         }
@@ -51,7 +51,6 @@ namespace API.Controller
         public async Task<ActionResult<GetVehiclePositionByDateQueryResponse>> GetVehiclePositionByDate(int VehicleId,
             DateTime FromDate, DateTime ToDate)
         {
-            var user = _loggedInUserService.UserId;
             var getPosition = new GetVehiclePositionByDateQuery()
             {
                 VehicleId = VehicleId,
