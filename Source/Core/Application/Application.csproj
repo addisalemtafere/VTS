@@ -23,7 +23,6 @@
   <ItemGroup>
     <Folder Include="Features\Locations\" />
     <Folder Include="Features\Locations\Queries" />
-    <Folder Include="Features\Vehicles\Queries\" />
   </ItemGroup>
 
 </Project>

@@ -23,7 +23,6 @@ namespace API.Controller
             ILoggedInUserService loggedInUserService)
         {
             _mediator = mediator;
-            _loggedInUserService = loggedInUserService;
         }
 
         [HttpPost("RecordVehiclePosition", Name = "RecordVehiclePosition")]
