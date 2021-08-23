@@ -1,4 +1,4 @@
-**GiG Coding Challenge**
+**SevenPeaks VTS Coding Challenge**
 
 
 I have used Clean Architecture for this POC, and here is how it is organized.
