@@ -8,7 +8,7 @@ namespace Application.Contracts.Repositories
 {
     public interface ILocationRepository : IRepository<Location>
     {
-        Task<VehicleCurrentLocationDto> GetCurrentPositonVehicle(int VehicleId);
+        Task<VehicleCurrentLocationDto> GetCurrentPositionVehicle(int VehicleId);
 
         Task<List<VehiclePositionDto>> GetByDate(int VehicleId, DateTime FromDate, DateTime ToDate);
     }

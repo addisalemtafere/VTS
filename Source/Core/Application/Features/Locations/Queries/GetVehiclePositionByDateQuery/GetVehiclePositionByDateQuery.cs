@@ -18,6 +18,16 @@ namespace Application.Features.Locations.Queries.GetVehiclePositionByDateQuery
             RuleFor(p => p.VehicleId)
                 .NotEmpty().WithMessage("{PropertyName} is required.")
                 .NotNull();
+
+            RuleFor(p => p.FromDate)
+                .NotEmpty().WithMessage("{PropertyName} is required.")
+                .NotNull()
+                .WithMessage("FromDate null is not allowed");
+
+            RuleFor(p => p.ToDate)
+                .NotEmpty().WithMessage("{PropertyName} is required.")
+                .NotNull()
+                .WithMessage("ToDate parameter is not allowed");
         }
     }
 }

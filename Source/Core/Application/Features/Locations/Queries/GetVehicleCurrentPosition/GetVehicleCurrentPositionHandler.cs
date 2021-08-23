@@ -46,7 +46,7 @@ namespace Application.Features.Locations.Queries.GetVehicleCurrentPosition
             }
 
             if (!createLocationCommandResponse.Success) return createLocationCommandResponse;
-            var location = await _locationRepository.GetCurrentPositonVehicle(request.VehicleId);
+            var location = await _locationRepository.GetCurrentPositionVehicle(request.VehicleId);
             var locationDto = _mapper.Map<VehicleCurrentLocationDto>(location);
             var localityAddress =
                 _geocodingService.GetAddressLocationAsync(locationDto.Latitude, locationDto.Longitude);
