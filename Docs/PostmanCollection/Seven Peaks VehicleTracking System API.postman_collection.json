@@ -1,6 +1,6 @@
 {
 	"info": {
-		"_postman_id": "583ce29b-7ba3-4d97-9d56-83fb514e7dfa",
+		"_postman_id": "046f635a-c567-4f61-8cb1-563b1cd1e087",
 		"name": "Seven Peaks VehicleTracking System API",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
@@ -23,7 +23,7 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\n    \"email\": \"fhjQe54qF8HWdrD@oVZoDbAgXUMo.cvw\",\n    \"password\": \"fhjQe54qF8HWdrD@oVZoDbAgXUMo.cvw\"\n}"
+									"raw": "{\n    \"email\": \"addis1@mSlKmXfcYLylTGEHnnDnS.uf\",\n    \"password\": \"P@55w0rd\"\n}"
 								},
 								"url": {
 									"raw": "{{baseUrl}}/api/Account/Authenticate",
@@ -51,7 +51,7 @@
 										],
 										"body": {
 											"mode": "raw",
-											"raw": "{\n    \"email\": \"voluptate dolor\",\n    \"password\": \"reprehenderit\"\n}"
+											"raw": "{\n    \"email\": \"commodo d\",\n    \"password\": \"dolore Ut nostrud ipsum\"\n}"
 										},
 										"url": {
 											"raw": "{{baseUrl}}/api/Account/Authenticate",
@@ -75,7 +75,7 @@
 										}
 									],
 									"cookie": [],
-									"body": "{\n \"id\": \"elit ipsum cupidatat\",\n \"userName\": \"sit adipisicing\",\n \"email\": \"tempor\",\n \"token\": \"cillum dolore cupidatat\"\n}"
+									"body": "{\n \"id\": \"in ullamco ipsum\",\n \"userName\": \"exercitation irure in\",\n \"email\": \"sit cupidatat\",\n \"token\": \"laborum mollit pariatur exercitation\"\n}"
 								}
 							]
 						},
@@ -91,7 +91,7 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\n    \"email\": \"fhjQe54qF8HWdrD@oVZoDbAgXUMo.cvw\",\n    \"name\": \"fugiat adipisicing in ullamco\",\n    \"password\": \"fhjQe54qF8HWdrD@oVZoDbAgXUMo.cvw\",\n    \"userName\": \"nostrudfugiate\"\n}"
+									"raw": "{\n    \"email\": \"addis1@mSlKmXfcYLylTGEHnnDnS.uf\",\n    \"name\": \"esse nostrud laborum eu\",\n    \"password\": \"P@55w0rd\",\n    \"userName\": \"sevenPeek\"\n}"
 								},
 								"url": {
 									"raw": "{{baseUrl}}/api/Account/Register",
@@ -119,7 +119,7 @@
 										],
 										"body": {
 											"mode": "raw",
-											"raw": "{\n    \"email\": \"fhjQe54qF8HWdrD@oVZoDbAgXUMo.cvw\",\n    \"name\": \"fugiat adipisicing in ullamco\",\n    \"password\": \"exercitation non\",\n    \"userName\": \"nostrud fugiat e\"\n}"
+											"raw": "{\n    \"email\": \"eFP1gOWLD4ROX@mSlKmXfcYLylTGEHnnDnS.uf\",\n    \"name\": \"esse nostrud laborum eu\",\n    \"password\": \"incididunt dolore\",\n    \"userName\": \"officia aliqua culpa\"\n}"
 										},
 										"url": {
 											"raw": "{{baseUrl}}/api/Account/Register",
@@ -143,7 +143,7 @@
 										}
 									],
 									"cookie": [],
-									"body": "{\n \"userId\": \"voluptate ess\"\n}"
+									"body": "{\n \"userId\": \"voluptate fugiat nostrud enim\"\n}"
 								}
 							]
 						}
@@ -164,7 +164,7 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\n    \"locationId\": 72908092,\n    \"latitude\": 42275923.92786685,\n    \"longitude\": 18378645.521722123,\n    \"altitude\": 38553581.29337403,\n    \"horizontalAccuracy\": -35607185.517698035,\n    \"verticalAccuracy\": -97974896.19217163,\n    \"speed\": 97609646.00104076,\n    \"createdTime\": \"1985-01-27T08:41:41.212Z\",\n    \"dateFrom\": \"2002-09-04T04:43:55.236Z\",\n    \"dateTo\": \"1953-01-06T21:40:46.188Z\",\n    \"vehicleId\": 44381070,\n    \"userId\": \"urn:uuid:ce4046dd-81fc-ec14-a698-aba21bc81e14\",\n    \"locality\": \"eu irure dolor in\"\n}"
+									"raw": "{\n    \"locationId\": 44940735,\n    \"latitude\": -65194555.64897116,\n    \"longitude\": 25669988.789897993,\n    \"altitude\": -36155255.34320665,\n    \"horizontalAccuracy\": 68895802.78509665,\n    \"verticalAccuracy\": 39681158.7774477,\n    \"speed\": 11374462.618518025,\n    \"createdTime\": \"2019-06-26T23:23:33.696Z\",\n    \"dateFrom\": \"1982-09-24T04:19:34.542Z\",\n    \"dateTo\": \"2010-12-22T09:06:36.020Z\",\n    \"vehicleId\": 87674498,\n    \"userId\": \"e462966a-54cf-9d3c-ff5f-88d835f1acdc\",\n    \"locality\": \"enim Ex\"\n}"
 								},
 								"url": {
 									"raw": "{{baseUrl}}/api/Location/RecordVehiclePosition",
@@ -192,7 +192,7 @@
 										],
 										"body": {
 											"mode": "raw",
-											"raw": "{\n    \"locationId\": 72908092,\n    \"latitude\": 42275923.92786685,\n    \"longitude\": 18378645.521722123,\n    \"altitude\": 38553581.29337403,\n    \"horizontalAccuracy\": -35607185.517698035,\n    \"verticalAccuracy\": -97974896.19217163,\n    \"speed\": 97609646.00104076,\n    \"createdTime\": \"1985-01-27T08:41:41.212Z\",\n    \"dateFrom\": \"2002-09-04T04:43:55.236Z\",\n    \"dateTo\": \"1953-01-06T21:40:46.188Z\",\n    \"vehicleId\": 44381070,\n    \"userId\": \"urn:uuid:ce4046dd-81fc-ec14-a698-aba21bc81e14\",\n    \"locality\": \"eu irure dolor in\"\n}"
+											"raw": "{\n    \"locationId\": 44940735,\n    \"latitude\": -65194555.64897116,\n    \"longitude\": 25669988.789897993,\n    \"altitude\": -36155255.34320665,\n    \"horizontalAccuracy\": 68895802.78509665,\n    \"verticalAccuracy\": 39681158.7774477,\n    \"speed\": 11374462.618518025,\n    \"createdTime\": \"2019-06-26T23:23:33.696Z\",\n    \"dateFrom\": \"1982-09-24T04:19:34.542Z\",\n    \"dateTo\": \"2010-12-22T09:06:36.020Z\",\n    \"vehicleId\": 87674498,\n    \"userId\": \"e462966a-54cf-9d3c-ff5f-88d835f1acdc\",\n    \"locality\": \"enim Ex\"\n}"
 										},
 										"url": {
 											"raw": "{{baseUrl}}/api/Location/RecordVehiclePosition",
@@ -216,27 +216,17 @@
 										}
 									],
 									"cookie": [],
-									"body": "{\n \"success\": false,\n \"message\": \"Lorem\",\n \"validationErrors\": [\n  \"Exce\",\n  \"adipisicing elit minim officia sint\"\n ],\n \"vehicle\": {\n  \"vehicleId\": -41071187,\n  \"name\": \"eiusmod aute Lorem\"\n }\n}"
+									"body": "{\n \"success\": true,\n \"message\": \"Excepteur sit laborum mollit\",\n \"validationErrors\": [\n  \"irure deserunt\",\n  \"aliqua commodo tempor\"\n ],\n \"vehicle\": {\n  \"vehicleId\": -31616799,\n  \"name\": \"cupi\"\n }\n}"
 								}
 							]
 						},
 						{
 							"name": "Retrieve Vehicle Current Position",
 							"request": {
-								"auth": {
-									"type": "bearer",
-									"bearer": [
-										{
-											"key": "token",
-											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiJlNDVhMjJhOS0zN2M0LTQ4NTYtODlhMC0wODM0N2VmODNhNjkiLCJzdWIiOiJub3N0cnVkZnVnaWF0ZSIsImp0aSI6ImQ5YTgzOTQ3LTMxMTYtNGI4ZC1iMmFiLWJhY2FlMDI1MDUxNSIsImVtYWlsIjoiZmhqUWU1NHFGOEhXZHJEQG9WWm9EYkFnWFVNby5jdnciLCJleHAiOjE2Mjk3MjM5OTMsImlzcyI6Ikdsb2JvVGlja2V0SWRlbnRpdHkiLCJhdWQiOiJHbG9ib1RpY2tldElkZW50aXR5VXNlciJ9.O2Q8iW-RlrGQK-mPdrDGFuE1Ns_WwQw6IEI9Z-Ko9ns",
-											"type": "string"
-										}
-									]
-								},
 								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": "{{baseUrl}}/api/Location/RetrieveVehicleCurrentPosition?VehicleId=9",
+									"raw": "{{baseUrl}}/api/Location/RetrieveVehicleCurrentPosition?VehicleId=34719995",
 									"host": [
 										"{{baseUrl}}"
 									],
@@ -248,7 +238,7 @@
 									"query": [
 										{
 											"key": "VehicleId",
-											"value": "9"
+											"value": "34719995"
 										}
 									]
 								}
@@ -266,7 +256,7 @@
 											}
 										],
 										"url": {
-											"raw": "{{baseUrl}}/api/Location/RetrieveVehicleCurrentPosition?VehicleId=-41554476",
+											"raw": "{{baseUrl}}/api/Location/RetrieveVehicleCurrentPosition?VehicleId=34719995",
 											"host": [
 												"{{baseUrl}}"
 											],
@@ -278,7 +268,7 @@
 											"query": [
 												{
 													"key": "VehicleId",
-													"value": "-41554476"
+													"value": "34719995"
 												}
 											]
 										}
@@ -293,7 +283,7 @@
 										}
 									],
 									"cookie": [],
-									"body": "{\n \"success\": false,\n \"message\": \"proident\",\n \"validationErrors\": [\n  \"et dolor\",\n  \"sunt laboris\"\n ],\n \"currentLocation\": {\n  \"locationId\": -10964263,\n  \"latitude\": 5533405.397188857,\n  \"longitude\": 52616038.33364847,\n  \"altitude\": 25040347.054525733,\n  \"horizontalAccuracy\": 26947259.593965396,\n  \"verticalAccuracy\": 85578217.94177055,\n  \"speed\": 79871838.012602,\n  \"createdTime\": \"1974-01-03T07:31:38.937Z\",\n  \"dateFrom\": \"1996-05-20T15:19:37.946Z\",\n  \"dateTo\": \"1994-10-27T05:03:52.788Z\",\n  \"vehicleId\": -73366330,\n  \"locality\": \"aliquip reprehenderit sint laborum nulla\"\n }\n}"
+									"body": "{\n \"success\": false,\n \"message\": \"dolore laboris\",\n \"validationErrors\": [\n  \"laboris\",\n  \"amet nisi laborum sint\"\n ],\n \"currentLocation\": {\n  \"locationId\": 23917388,\n  \"latitude\": -44393413.335172705,\n  \"longitude\": 67002804.00849503,\n  \"altitude\": 23051963.241879523,\n  \"horizontalAccuracy\": 80221084.53224036,\n  \"verticalAccuracy\": 52837201.64381194,\n  \"speed\": 41326928.70482889,\n  \"createdTime\": \"1949-07-22T18:15:43.674Z\",\n  \"dateFrom\": \"1966-03-09T20:58:17.375Z\",\n  \"dateTo\": \"1990-05-10T07:45:50.921Z\",\n  \"vehicleId\": -38238139,\n  \"locality\": \"consectetur fugiat esse voluptate\"\n }\n}"
 								},
 								{
 									"name": "Error",
@@ -307,7 +297,7 @@
 											}
 										],
 										"url": {
-											"raw": "{{baseUrl}}/api/Location/RetrieveVehicleCurrentPosition?VehicleId=-41554476",
+											"raw": "{{baseUrl}}/api/Location/RetrieveVehicleCurrentPosition?VehicleId=34719995",
 											"host": [
 												"{{baseUrl}}"
 											],
@@ -319,7 +309,7 @@
 											"query": [
 												{
 													"key": "VehicleId",
-													"value": "-41554476"
+													"value": "34719995"
 												}
 											]
 										}
@@ -334,27 +324,17 @@
 										}
 									],
 									"cookie": [],
-									"body": "{\n \"type\": \"cillum occaecat velit\",\n \"title\": \"ut Ut incididunt ullamco\",\n \"status\": 41948126,\n \"detail\": \"in labore culpa ea\",\n \"instance\": \"velit sit do nulla\"\n}"
+									"body": "{\n \"type\": \"eu aute\",\n \"title\": \"cillum minim commod\",\n \"status\": -8779713,\n \"detail\": \"fugiat voluptate dolore\",\n \"instance\": \"dolor ut\"\n}"
 								}
 							]
 						},
 						{
 							"name": "Retrieve Vehicle Position By Date",
 							"request": {
-								"auth": {
-									"type": "bearer",
-									"bearer": [
-										{
-											"key": "token",
-											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiJlNDVhMjJhOS0zN2M0LTQ4NTYtODlhMC0wODM0N2VmODNhNjkiLCJzdWIiOiJub3N0cnVkZnVnaWF0ZSIsImp0aSI6IjNhNjJhMzhiLTRiMDEtNDZhZi1hYjI2LWY0NTUyNjJmZDFiNCIsImVtYWlsIjoiZmhqUWU1NHFGOEhXZHJEQG9WWm9EYkFnWFVNby5jdnciLCJleHAiOjE2Mjk3MzA0MjIsImlzcyI6Ikdsb2JvVGlja2V0SWRlbnRpdHkiLCJhdWQiOiJHbG9ib1RpY2tldElkZW50aXR5VXNlciJ9.JKQL7LMyDgraK6g1Kzi_Tjq21u2fEk5P4trKwXfwzok",
-											"type": "string"
-										}
-									]
-								},
 								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": "{{baseUrl}}/api/Location/RetrieveVehiclePositionByDate?VehicleId=9&FromDate=2021-06-09&ToDate=2021-09-09",
+									"raw": "{{baseUrl}}/api/Location/RetrieveVehiclePositionByDate?VehicleId=34719995&FromDate=1969-04-13T11:52:04.905Z&ToDate=1969-04-13T11:52:04.905Z",
 									"host": [
 										"{{baseUrl}}"
 									],
@@ -366,15 +346,15 @@
 									"query": [
 										{
 											"key": "VehicleId",
-											"value": "9"
+											"value": "34719995"
 										},
 										{
 											"key": "FromDate",
-											"value": "2021-06-09"
+											"value": "1969-04-13T11:52:04.905Z"
 										},
 										{
 											"key": "ToDate",
-											"value": "2021-09-09"
+											"value": "1969-04-13T11:52:04.905Z"
 										}
 									]
 								}
@@ -392,7 +372,7 @@
 											}
 										],
 										"url": {
-											"raw": "{{baseUrl}}/api/Location/RetrieveVehiclePositionByDate?VehicleId=-41554476&FromDate=2003-08-21T21:19:47.886Z&ToDate=2003-08-21T21:19:47.886Z",
+											"raw": "{{baseUrl}}/api/Location/RetrieveVehiclePositionByDate?VehicleId=34719995&FromDate=1969-04-13T11:52:04.905Z&ToDate=1969-04-13T11:52:04.905Z",
 											"host": [
 												"{{baseUrl}}"
 											],
@@ -404,15 +384,15 @@
 											"query": [
 												{
 													"key": "VehicleId",
-													"value": "-41554476"
+													"value": "34719995"
 												},
 												{
 													"key": "FromDate",
-													"value": "2003-08-21T21:19:47.886Z"
+													"value": "1969-04-13T11:52:04.905Z"
 												},
 												{
 													"key": "ToDate",
-													"value": "2003-08-21T21:19:47.886Z"
+													"value": "1969-04-13T11:52:04.905Z"
 												}
 											]
 										}
@@ -427,7 +407,7 @@
 										}
 									],
 									"cookie": [],
-									"body": "{\n \"success\": true,\n \"message\": \"pariatur reprehenderit\",\n \"validationErrors\": [\n  \"sed eiusmod qui amet velit\",\n  \"in non\"\n ],\n \"vehiclePosition\": [\n  {\n   \"locationId\": -90208097,\n   \"latitude\": -57969776.541299604,\n   \"longitude\": -15701929.283512369,\n   \"altitude\": 70744018.20711672,\n   \"horizontalAccuracy\": -40228086.10255444,\n   \"verticalAccuracy\": -55339072.986279495,\n   \"speed\": 31873375.963991582,\n   \"createdTime\": \"2019-01-10T19:35:34.318Z\",\n   \"dateFrom\": \"2000-03-17T15:08:53.923Z\",\n   \"dateTo\": \"2008-08-06T11:14:54.363Z\",\n   \"vehicleId\": -64378532,\n   \"locality\": \"id proident esse\"\n  },\n  {\n   \"locationId\": -12500320,\n   \"latitude\": 97510118.57131022,\n   \"longitude\": 4798858.036516666,\n   \"altitude\": 22818783.75627415,\n   \"horizontalAccuracy\": 49760497.21518624,\n   \"verticalAccuracy\": -81224854.01876576,\n   \"speed\": 46004158.37836936,\n   \"createdTime\": \"1987-08-08T02:55:30.663Z\",\n   \"dateFrom\": \"1974-02-11T15:57:38.764Z\",\n   \"dateTo\": \"1980-01-24T22:12:06.047Z\",\n   \"vehicleId\": 58109563,\n   \"locality\": \"Excepteur fugiat eu\"\n  }\n ]\n}"
+									"body": "{\n \"success\": true,\n \"message\": \"dolor ex ut\",\n \"validationErrors\": [\n  \"adipisicing nulla reprehenderit proident nostrud\",\n  \"tempor velit laboris\"\n ],\n \"vehiclePosition\": [\n  {\n   \"locationId\": -13196251,\n   \"latitude\": 72553153.37987706,\n   \"longitude\": -85987612.05523546,\n   \"altitude\": 99698395.70208076,\n   \"horizontalAccuracy\": -12481164.09904094,\n   \"verticalAccuracy\": 16104913.192159832,\n   \"speed\": -18338901.68198961,\n   \"createdTime\": \"2005-04-10T05:33:20.751Z\",\n   \"dateFrom\": \"1943-05-10T11:45:16.689Z\",\n   \"dateTo\": \"1967-08-31T15:09:58.027Z\",\n   \"vehicleId\": -7370645,\n   \"locality\": \"labore consectetur amet\"\n  },\n  {\n   \"locationId\": 10956498,\n   \"latitude\": -41856938.26375929,\n   \"longitude\": 20299959.395184293,\n   \"altitude\": 49263280.53933701,\n   \"horizontalAccuracy\": 59786123.235613614,\n   \"verticalAccuracy\": 9397826.194037467,\n   \"speed\": -87750531.21253565,\n   \"createdTime\": \"1996-01-13T12:52:08.014Z\",\n   \"dateFrom\": \"1995-03-11T03:29:04.821Z\",\n   \"dateTo\": \"1952-03-03T14:00:57.630Z\",\n   \"vehicleId\": 13706524,\n   \"locality\": \"commodo\"\n  }\n ]\n}"
 								},
 								{
 									"name": "Error",
@@ -441,7 +421,7 @@
 											}
 										],
 										"url": {
-											"raw": "{{baseUrl}}/api/Location/RetrieveVehiclePositionByDate?VehicleId=-41554476&FromDate=2003-08-21T21:19:47.886Z&ToDate=2003-08-21T21:19:47.886Z",
+											"raw": "{{baseUrl}}/api/Location/RetrieveVehiclePositionByDate?VehicleId=34719995&FromDate=1969-04-13T11:52:04.905Z&ToDate=1969-04-13T11:52:04.905Z",
 											"host": [
 												"{{baseUrl}}"
 											],
@@ -453,15 +433,15 @@
 											"query": [
 												{
 													"key": "VehicleId",
-													"value": "-41554476"
+													"value": "34719995"
 												},
 												{
 													"key": "FromDate",
-													"value": "2003-08-21T21:19:47.886Z"
+													"value": "1969-04-13T11:52:04.905Z"
 												},
 												{
 													"key": "ToDate",
-													"value": "2003-08-21T21:19:47.886Z"
+													"value": "1969-04-13T11:52:04.905Z"
 												}
 											]
 										}
@@ -476,77 +456,157 @@
 										}
 									],
 									"cookie": [],
-									"body": "{\n \"type\": \"cillum occaecat velit\",\n \"title\": \"ut Ut incididunt ullamco\",\n \"status\": 41948126,\n \"detail\": \"in labore culpa ea\",\n \"instance\": \"velit sit do nulla\"\n}"
+									"body": "{\n \"type\": \"eu aute\",\n \"title\": \"cillum minim commod\",\n \"status\": -8779713,\n \"detail\": \"fugiat voluptate dolore\",\n \"instance\": \"dolor ut\"\n}"
 								}
 							]
 						}
 					]
 				},
 				{
-					"name": "Register Vehicle",
-					"request": {
-						"method": "POST",
-						"header": [
-							{
-								"key": "Content-Type",
-								"value": "application/json"
-							}
-						],
-						"body": {
-							"mode": "raw",
-							"raw": "{\n    \"vehicleId\": 64492399,\n    \"vehicleName\": \"aute\",\n    \"maker\": \"occaecat est eu deserunt ea\",\n    \"model\": \"minim sed in\",\n    \"year\": \"ut proident\",\n    \"bodyType\": \"mollit fugiat minim\",\n    \"userId\": 14401490,\n    \"name\": \"fugiat Duis reprehenderit\",\n    \"userName\": \"labore aliqua inci\",\n    \"password\": \"magna Excepteur exercitation et consectetur\",\n    \"mobileNumber\": \"aute minim\",\n    \"email\": \"eu\",\n    \"userTypeId\": -6074208,\n    \"deviceId\": 86810778,\n    \"Imei\": \"urn:uuid:3a0ffb24-88e9-ccd3-de0e-a57c1a300dfe\",\n    \"trackingDeviceName\": \"consequ\",\n    \"status\": 2\n}"
-						},
-						"url": {
-							"raw": "{{baseUrl}}/api/Vehicle/registerVehicle",
-							"host": [
-								"{{baseUrl}}"
-							],
-							"path": [
-								"api",
-								"Vehicle",
-								"registerVehicle"
-							]
-						}
-					},
-					"response": [
+					"name": "Vehicle",
+					"item": [
 						{
-							"name": "Success",
-							"originalRequest": {
+							"name": "Register Vehicle",
+							"request": {
 								"method": "POST",
 								"header": [
 									{
-										"description": "Added as a part of security scheme: apikey",
-										"key": "Authorization",
-										"value": "<API Key>"
+										"key": "Content-Type",
+										"value": "application/json"
 									}
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\n    \"vehicleId\": 64492399,\n    \"vehicleName\": \"aute\",\n    \"maker\": \"occaecat est eu deserunt ea\",\n    \"model\": \"minim sed in\",\n    \"year\": \"ut proident\",\n    \"bodyType\": \"mollit fugiat minim\",\n    \"userId\": 14401490,\n    \"name\": \"fugiat Duis reprehenderit\",\n    \"userName\": \"labore aliqua inci\",\n    \"password\": \"magna Excepteur exercitation et consectetur\",\n    \"mobileNumber\": \"aute minim\",\n    \"email\": \"eu\",\n    \"userTypeId\": -6074208,\n    \"deviceId\": 86810778,\n    \"Imei\": \"urn:uuid:3a0ffb24-88e9-ccd3-de0e-a57c1a300dfe\",\n    \"trackingDeviceName\": \"consequ\",\n    \"status\": 2\n}"
+									"raw": "{\n    \"vehicleId\": 0,\n    \"vehicleName\": \"in 88n eu dolore Excepteur\",\n    \"maker\": \"incididunt eiusmod\",\n    \"model\": \"commodo dolor dolor\",\n    \"year\": \"minim adipisicing\",\n     \"name\": \"minim adipisicing\",\n     \"userName\": \"minimadipisicing\",\n      \"email\": \"addis1@mSlKmXfcYLylTGEHnnDnS.uf\",\n    \"password\": \"P@55w0rd\",\n    \"deviceId\": 0,\n    \"imeiNumber\": \"4e791208-3d9d-7817-de75-29df8cb17349\",\n    \"trackingDeviceName\": \"minim ullamco\",\n    \"status\": 1\n}"
 								},
 								"url": {
-									"raw": "{{baseUrl}}/api/Vehicle/registerVehicle",
+									"raw": "{{baseUrl}}/api/Vehicle/RegisterVehicle",
 									"host": [
 										"{{baseUrl}}"
 									],
 									"path": [
 										"api",
 										"Vehicle",
-										"registerVehicle"
+										"RegisterVehicle"
 									]
 								}
 							},
-							"status": "OK",
-							"code": 200,
-							"_postman_previewlanguage": "json",
-							"header": [
+							"response": [
 								{
-									"key": "Content-Type",
-									"value": "application/json"
+									"name": "Success",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: apikey",
+												"key": "Authorization",
+												"value": "<API Key>"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"vehicleId\": -38064629,\n    \"vehicleName\": \"in in eu dolore Excepteur\",\n    \"maker\": \"incididunt eiusmod\",\n    \"model\": \"commodo dolor dolor\",\n    \"year\": \"minim adipisicing\",\n    \"bodyType\": \"et\",\n    \"userId\": -20069157,\n    \"name\": \"ut eu cupidatat ipsum culpa\",\n    \"userName\": \"sed ipsum et qui\",\n    \"password\": \"esse fugiat adipisicing culpa et\",\n    \"mobileNumber\": \"ipsum aliquip\",\n    \"email\": \"ipsum\",\n    \"userTypeId\": -15758143,\n    \"deviceId\": -89038273,\n    \"imeiNumber\": \"4e791208-3d9d-7817-de75-29df8cb17341\",\n    \"trackingDeviceName\": \"minim ullamco\",\n    \"status\": 1\n}"
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/Vehicle/RegisterVehicle",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"Vehicle",
+												"RegisterVehicle"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n \"success\": true,\n \"message\": \"nostrud ad v\",\n \"validationErrors\": [\n  \"aliqua sint incididunt amet\",\n  \"reprehenderit conse\"\n ],\n \"vehicle\": {\n  \"vehicleId\": -63877536,\n  \"name\": \"anim nulla aliquip\"\n }\n}"
 								}
-							],
-							"cookie": [],
-							"body": "{\n \"success\": true,\n \"message\": \"dolore id\",\n \"validationErrors\": [\n  \"ea qui ex deserunt\",\n  \"reprehenderit sint fugiat\"\n ],\n \"vehicle\": {\n  \"vehicleId\": -39260877,\n  \"name\": \"aute mollit cillum ipsum\"\n }\n}"
+							]
+						},
+						{
+							"name": "Get All Vehicles With Devices",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/api/Vehicle/GetAllVehiclesWithDevices?page=1&size=2",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"Vehicle",
+										"GetAllVehiclesWithDevices"
+									],
+									"query": [
+										{
+											"key": "page",
+											"value": "1"
+										},
+										{
+											"key": "size",
+											"value": "2"
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Success",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: apikey",
+												"key": "Authorization",
+												"value": "<API Key>"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/api/Vehicle/GetAllVehiclesWithDevices?page=34719995&size=34719995",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"Vehicle",
+												"GetAllVehiclesWithDevices"
+											],
+											"query": [
+												{
+													"key": "page",
+													"value": "34719995"
+												},
+												{
+													"key": "size",
+													"value": "34719995"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n \"success\": false,\n \"message\": \"mollit ipsum\",\n \"validationErrors\": [\n  \"deserunt occaecat laborum nostrud\",\n  \"reprehenderit non nisi\"\n ],\n \"count\": -192030,\n \"page\": -2402081,\n \"size\": 3351322\n}"
+								}
+							]
 						}
 					]
 				}
