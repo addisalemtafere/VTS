@@ -1,6 +1,6 @@
-﻿using System.Collections.Generic;
-using Application.Features.Locations.Queries.GetVehicleCurrentPosition;
+﻿using Application.Features.Locations.Queries.GetVehicleCurrentPosition;
 using Application.Responses;
+using System.Collections.Generic;
 
 namespace Application.Features.Locations.Queries.GetVehiclePositionByDateQuery
 {

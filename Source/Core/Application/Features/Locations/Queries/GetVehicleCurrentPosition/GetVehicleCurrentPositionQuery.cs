@@ -1,5 +1,4 @@
-﻿using System;
-using FluentValidation;
+﻿using FluentValidation;
 using MediatR;
 
 namespace Application.Features.Locations.Queries.GetVehicleCurrentPosition
@@ -8,7 +7,6 @@ namespace Application.Features.Locations.Queries.GetVehicleCurrentPosition
     {
         public int VehicleId { get; set; }
     }
-
 
     public class GetVehicleCurrentPositionQueryValidator : AbstractValidator<GetVehicleCurrentPositionQuery>
     {

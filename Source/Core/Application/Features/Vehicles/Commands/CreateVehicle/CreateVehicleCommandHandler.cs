@@ -1,10 +1,8 @@
 ﻿using Application.Contracts.Repositories;
 using Application.Contracts.Services.Identity;
-using Application.Features.Vehicles.Commands.CreateVehicle;
 using Application.Models.Authentication;
 using AutoMapper;
 using Domain.Entities;
-using FluentValidation;
 using MediatR;
 using System.Collections.Generic;
 using System.Threading;
@@ -18,7 +16,6 @@ namespace Application.Features.Vehicles.Commands.CreateVehicle
         private readonly ITrackingDeviceRepository _trackingDeviceRepository;
         private readonly IMapper _mapper;
         private readonly IAuthenticationService _authenticationService;
-
 
         public CreateVehicleCommandHandler(IMapper mapper,
             IRepository<Vehicle> vehicleRepository,

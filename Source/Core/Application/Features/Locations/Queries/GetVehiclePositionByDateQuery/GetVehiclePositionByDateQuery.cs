@@ -1,6 +1,6 @@
-﻿using System;
-using FluentValidation;
+﻿using FluentValidation;
 using MediatR;
+using System;
 
 namespace Application.Features.Locations.Queries.GetVehiclePositionByDateQuery
 {
@@ -10,7 +10,6 @@ namespace Application.Features.Locations.Queries.GetVehiclePositionByDateQuery
         public DateTime FromDate { get; set; }
         public DateTime ToDate { get; set; }
     }
-
 
     public class GetVehiclePositionByDateQueryQueryValidator : AbstractValidator<GetVehiclePositionByDateQuery>
     {

@@ -39,7 +39,6 @@ namespace Infrastructure
                 configuration.GetConnectionString("VehicleTrackingSystemConnectionString"),
                 b => b.MigrationsAssembly(typeof(VehicleTrackingSystemDbContext).Assembly.FullName)));
 
-
             services.AddSingleton<ISqlConnectionFactory>(x =>
                 new SqlConnectionFactory(configuration.GetConnectionString("VehicleTrackingSystemConnectionString")));
 
@@ -106,7 +105,7 @@ namespace Infrastructure
             services.AddScoped(typeof(IRepository<>), typeof(BaseRepository<>));
             services.AddScoped<ITrackingDeviceRepository, TrackingDeviceRepository>();
             services.AddScoped<ILocationRepository, LocationRepository>();
-
+            services.AddScoped<IVehicleRepository, VehicleRepository>();
 
             return services;
         }

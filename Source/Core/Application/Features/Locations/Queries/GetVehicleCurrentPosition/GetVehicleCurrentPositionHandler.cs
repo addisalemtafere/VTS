@@ -1,12 +1,11 @@
-﻿using System.Collections.Generic;
-using System.Threading;
-using System.Threading.Tasks;
-using Application.Contracts.Repositories;
-using Application.Features.Locations.Commands;
+﻿using Application.Contracts.Repositories;
 using AutoMapper;
 using Domain.Entities;
 using GoogleMaps.LocationServices;
 using MediatR;
+using System.Collections.Generic;
+using System.Threading;
+using System.Threading.Tasks;
 
 namespace Application.Features.Locations.Queries.GetVehicleCurrentPosition
 {
@@ -47,7 +46,6 @@ namespace Application.Features.Locations.Queries.GetVehicleCurrentPosition
                 var location = await _repository.GetByIdAsync(request.VehicleId);
                 var location2 = await _locationRepository.Get(request.VehicleId);
                 var gls = new GoogleLocationService();
-
 
                 var locationDto = _mapper.Map<VehicleCurrentLocationDto>(location);
 

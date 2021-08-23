@@ -57,9 +57,9 @@ namespace API.Middleware
                     break;
             }
 
-            context.Response.StatusCode = (int) httpStatusCode;
+            context.Response.StatusCode = (int)httpStatusCode;
 
-            if (result == string.Empty) result = JsonConvert.SerializeObject(new {error = exception.Message});
+            if (result == string.Empty) result = JsonConvert.SerializeObject(new { error = exception.Message });
 
             return context.Response.WriteAsync(result);
         }

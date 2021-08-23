@@ -1,15 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Application.Contracts.Repositories;
+﻿using Application.Contracts.Repositories;
 using Application.Features.Locations.Queries.GetVehicleCurrentPosition;
 using Domain.Entities;
 using Infrastructure.Persistence.DataProvider;
-using Microsoft.EntityFrameworkCore;
 using Persistence;
 using Persistence.Repository;
+using System.Collections.Generic;
+using System.Threading.Tasks;
 
 namespace Infrastructure.Persistence.Repository
 {
@@ -22,7 +18,6 @@ namespace Infrastructure.Persistence.Repository
         {
             _sqlConnectionFactory = sqlConnectionFactory;
         }
-
 
         public async Task<VehicleCurrentLocationDto> Get(int VehicleId)
         {
