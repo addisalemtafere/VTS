@@ -29,10 +29,11 @@ namespace Application.Features.Vehicles.Queries.GetVehiclesQuery
         {
             var vehiclesQueryResponse = new GetVehiclesQueryResponse();
             var list = await _vehicleRepository.GetPagedVehicle(request.Page, request.Size);
+            var countVehicles = await _vehicleRepository.countVehicle();
             var allVehicleDto = _mapper.Map<List<VehicleDetailDto>>(list);
 
             vehiclesQueryResponse.Vehicles = allVehicleDto;
-            vehiclesQueryResponse.Count = allVehicleDto.Count;
+            vehiclesQueryResponse.Count = countVehicles;
             vehiclesQueryResponse.Page = request.Page;
             vehiclesQueryResponse.Size = request.Size;
 

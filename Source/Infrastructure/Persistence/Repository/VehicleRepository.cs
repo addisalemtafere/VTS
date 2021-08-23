@@ -21,5 +21,10 @@ namespace Infrastructure.Persistence.Repository
                 .Skip((page - 1) * size).Take(size)
                 .AsNoTracking().ToListAsync();
         }
+
+        public async Task<int> countVehicle()
+        {
+            return _vtsDbContext.Vehicles.Select(x => x.Id).Count();
+        }
     }
 }
