@@ -1,4 +1,5 @@
 ﻿using Application.Contracts.Repositories;
+using Application.Contracts.Services.GoogleGeocodingService;
 using Application.Features.Locations.Queries.GetVehicleCurrentPosition;
 using AutoMapper;
 using Domain.Entities;
@@ -6,7 +7,6 @@ using MediatR;
 using System.Collections.Generic;
 using System.Threading;
 using System.Threading.Tasks;
-using Application.Contracts.Services.GoogleGeocodingService;
 
 namespace Application.Features.Locations.Queries.GetVehiclePositionByDateQuery
 {

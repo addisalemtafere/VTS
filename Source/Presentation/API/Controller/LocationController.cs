@@ -18,13 +18,11 @@ namespace API.Controller
     public class LocationController : ControllerBase
     {
         private readonly IMediator _mediator;
-        private readonly ILoggedInUserService _loggedInUserService;
 
         public LocationController(IMediator mediator,
             ILoggedInUserService loggedInUserService)
         {
             _mediator = mediator;
-            _loggedInUserService = loggedInUserService;
         }
 
         [HttpPost("RecordVehiclePosition", Name = "RecordVehiclePosition")]
@@ -40,7 +38,7 @@ namespace API.Controller
         [ProducesDefaultResponseType]
         public async Task<ActionResult<GetVehicleCurrentLocationQueryResponse>> GetVehicleCurrentPosition(int VehicleId)
         {
-            var getCurrentPosition = new GetVehicleCurrentPositionQuery() {VehicleId = VehicleId};
+            var getCurrentPosition = new GetVehicleCurrentPositionQuery() { VehicleId = VehicleId };
             var vehiclePosition = await _mediator.Send(getCurrentPosition);
             return Ok(vehiclePosition);
         }

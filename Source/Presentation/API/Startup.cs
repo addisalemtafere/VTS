@@ -95,6 +95,7 @@ namespace API
             app.UseSwagger();
             app.UseSwaggerUI(c =>
             {
+                c.RoutePrefix = string.Empty;
                 c.SwaggerEndpoint("/swagger/v1/swagger.json", "Seven Peaks VehicleTracking System API");
             });
 

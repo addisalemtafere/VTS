@@ -1,6 +1,6 @@
-﻿using System;
-using Application.Features.Locations.Queries.GetVehicleCurrentPosition;
+﻿using Application.Features.Locations.Queries.GetVehicleCurrentPosition;
 using Domain.Entities;
+using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 

@@ -61,14 +61,9 @@ namespace SevenPeaks.VehicleTrackingSystem.Tests.Validators
                 VehicleId = 2,
                 LocationId = 1,
                 UserId = userId,
-                Locality = "en",
-                CreatedTime = DateTime.Now,
                 Altitude = 29.0,
                 Longitude = 60.56,
                 Latitude = 76.78,
-                Speed = 120.0,
-                HorizontalAccuracy = 30,
-                VerticalAccuracy = 90,
             };
 
             var result = _createLocationCommandValidator.Validate(command);

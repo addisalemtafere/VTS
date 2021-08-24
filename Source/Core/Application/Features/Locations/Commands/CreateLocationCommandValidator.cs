@@ -1,7 +1,6 @@
 ﻿using Application.Contracts;
 using Application.Contracts.Repositories;
 using FluentValidation;
-using System;
 using System.Threading;
 using System.Threading.Tasks;
 
@@ -27,15 +26,7 @@ namespace Application.Features.Locations.Commands
                 .MustAsync(CheckUserCanAddOrUpdateLocation)
                 .WithMessage("User has no privilege to update or add vehicle position");
 
-            RuleFor(p => p.Locality)
-                .NotEmpty().WithMessage("{PropertyName} is required.")
-                .NotNull()
-                .MaximumLength(50).WithMessage("{PropertyName} must not exceed 50 characters.");
-
-            RuleFor(p => p.CreatedTime)
-                .NotEmpty().WithMessage("{PropertyName} is required.")
-                .NotNull()
-                .GreaterThan(DateTime.Now);
+           
 
             RuleFor(p => p.Altitude)
                 .NotEmpty().WithMessage("{PropertyName} is required")
@@ -49,14 +40,6 @@ namespace Application.Features.Locations.Commands
                 .NotEmpty().WithMessage("{PropertyName} is required")
                 .NotNull().WithMessage("{PropertyName} is required");
 
-            RuleFor(p => p.Speed)
-                .NotEmpty().WithMessage("{PropertyName} is required")
-                .NotNull().WithMessage("{PropertyName} is required");
-
-            RuleFor(p => p.HorizontalAccuracy)
-                .NotEmpty().WithMessage("{PropertyName} is required")
-                .NotNull().WithMessage("{PropertyName} is required");
-
             RuleFor(p => p.VehicleId)
                 .NotEmpty().WithMessage("{PropertyName} is required")
                 .NotNull().WithMessage("{PropertyName} is required");
@@ -64,13 +47,14 @@ namespace Application.Features.Locations.Commands
 
         private async Task<bool> VehicleIsExist(CreateLocationCommand request, CancellationToken token)
         {
-            var vehicle = await _vehicleRepository.GetByIdAsync(request.VehicleId);
-            return vehicle != null;
+            var vehicle = _vehicleRepository.GetByIdAsync(request.VehicleId);
+            var isVehicleExist = await vehicle != null;
+            return isVehicleExist;
         }
 
         private async Task<bool> CheckUserCanAddOrUpdateLocation(CreateLocationCommand request, CancellationToken token)
         {
-            var isValidUser = request.UserId.ToString() == _loggedInUserService.UserId ? true : false;
+            var isValidUser = request.UserId.ToString() == _loggedInUserService.UserId;
             return isValidUser;
         }
     }

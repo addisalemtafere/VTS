@@ -1,0 +1,724 @@
+{
+	"info": {
+		"_postman_id": "bc363fd1-be91-480c-ae08-16a4e8926957",
+		"name": "Seven Peaks VehicleTracking System API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "api",
+			"item": [
+				{
+					"name": "Account",
+					"item": [
+						{
+							"name": "/api/Account/Authenticate",
+							"event": [
+								{
+									"listen": "prerequest",
+									"script": {
+										"exec": [
+											""
+										],
+										"type": "text/javascript"
+									}
+								},
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"let jsonData = JSON.parse(responseBody);\r",
+											"pm.environment.set(\"accessToken\", jsonData.token);\r",
+											""
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"password\": \"P@55w0rdaung64\",\n    \"email\": \"addd12rrr@gma6il.com4\"\n}"
+								},
+								"url": {
+									"raw": "{{baseUrl}}/api/Account/Authenticate",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"Account",
+										"Authenticate"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Success",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: apikey",
+												"key": "Authorization",
+												"value": "<API Key>"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"email\": \"magna qui\",\n    \"password\": \"Duis reprehenderit aliqua eiusmod elit\"\n}"
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/Account/Authenticate",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"Account",
+												"Authenticate"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n \"id\": \"in et deserunt\",\n \"userName\": \"id commodo aute dolor\",\n \"email\": \"velit in dolor esse\",\n \"token\": \"veniam ut\"\n}"
+								}
+							]
+						},
+						{
+							"name": "/api/Account/Register",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"email\": \"sevenpeek12@gmail.com\",\n    \"password\": \"P@55w0rd\",\n    \"name\": \"seven peek\",\n    \"userName\": \"sevenPeakUsername\"\n}"
+								},
+								"url": {
+									"raw": "{{baseUrl}}/api/Account/Register",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"Account",
+										"Register"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Success",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: apikey",
+												"key": "Authorization",
+												"value": "<API Key>"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"email\": \"5Li@ZKHpAfhKsYivVaobk.wt\",\n    \"name\": \"incididunt proident elit\",\n    \"password\": \"cupidatat dolore sint ci\",\n    \"userName\": \"officia voluptate\"\n}"
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/Account/Register",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"Account",
+												"Register"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n \"userId\": \"et dolor\"\n}"
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "Location",
+					"item": [
+						{
+							"name": "Record Vehicle Position",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											""
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{accessToken}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"locationId\": -54338371,\n    \"latitude\": 13.736717,\n    \"longitude\": 100.523186,\n    \"altitude\": 9.58585,\n    \"vehicleId\": {{VehicleId}},\n    \"userId\": \"{{UserId}}\"\n}"
+								},
+								"url": {
+									"raw": "{{baseUrl}}/api/Location/RecordVehiclePosition",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"Location",
+										"RecordVehiclePosition"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Success",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: apikey",
+												"key": "Authorization",
+												"value": "<API Key>"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"locationId\": -54338371,\n    \"latitude\": 43786305.52157223,\n    \"longitude\": 74002061.53873655,\n    \"altitude\": -73403683.64630368,\n    \"vehicleId\": -30117600,\n    \"userId\": \"urn:uuid:4e872bfb-eee0-d883-b15f-c01829ab0056\",\n    \"locality\": \"sed sun\"\n}"
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/Location/RecordVehiclePosition",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"Location",
+												"RecordVehiclePosition"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n \"success\": true,\n \"message\": \"in qui\",\n \"validationErrors\": [\n  \"in do\",\n  \"incididunt eu in Excep\"\n ],\n \"vehicle\": {\n  \"vehicleId\": 26837238,\n  \"name\": \"laboris et sint non\"\n }\n}"
+								}
+							]
+						},
+						{
+							"name": "Retrieve Vehicle Current Position",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{accessToken}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/api/Location/RetrieveVehicleCurrentPosition?VehicleId={{VehicleId}}",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"Location",
+										"RetrieveVehicleCurrentPosition"
+									],
+									"query": [
+										{
+											"key": "VehicleId",
+											"value": "{{VehicleId}}"
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Success",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: apikey",
+												"key": "Authorization",
+												"value": "<API Key>"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/api/Location/RetrieveVehicleCurrentPosition?VehicleId=-89638050",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"Location",
+												"RetrieveVehicleCurrentPosition"
+											],
+											"query": [
+												{
+													"key": "VehicleId",
+													"value": "-89638050"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n \"success\": true,\n \"message\": \"est labore qui minim\",\n \"validationErrors\": [\n  \"offi\",\n  \"proident exercitat\"\n ],\n \"currentLocation\": {\n  \"locationId\": -80912154,\n  \"latitude\": 19319047.028330117,\n  \"longitude\": -76706439.54721017,\n  \"altitude\": -1038355.1086947173,\n  \"createdDate\": \"2004-11-01T11:01:30.792Z\",\n  \"vehicleId\": -50302968,\n  \"locality\": \"cupidatat officia\"\n }\n}"
+								},
+								{
+									"name": "Error",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: apikey",
+												"key": "Authorization",
+												"value": "<API Key>"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/api/Location/RetrieveVehicleCurrentPosition?VehicleId=-89638050",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"Location",
+												"RetrieveVehicleCurrentPosition"
+											],
+											"query": [
+												{
+													"key": "VehicleId",
+													"value": "-89638050"
+												}
+											]
+										}
+									},
+									"status": "Internal Server Error",
+									"code": 500,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n \"type\": \"sint consequat dolor voluptate amet\",\n \"title\": \"irure est eiu\",\n \"status\": 87827901,\n \"detail\": \"ut nostrud \",\n \"instance\": \"consequat in id\"\n}"
+								}
+							]
+						},
+						{
+							"name": "Retrieve Vehicle Position By Date",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{accessToken}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/api/Location/RetrieveVehiclePositionByDate?VehicleId=-89638050&FromDate=1981-04-13T03:12:19.576Z&ToDate=1981-04-13T03:12:19.576Z",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"Location",
+										"RetrieveVehiclePositionByDate"
+									],
+									"query": [
+										{
+											"key": "VehicleId",
+											"value": "-89638050"
+										},
+										{
+											"key": "FromDate",
+											"value": "1981-04-13T03:12:19.576Z"
+										},
+										{
+											"key": "ToDate",
+											"value": "1981-04-13T03:12:19.576Z"
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Success",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: apikey",
+												"key": "Authorization",
+												"value": "<API Key>"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/api/Location/RetrieveVehiclePositionByDate?VehicleId=-89638050&FromDate=1981-04-13T03:12:19.576Z&ToDate=1981-04-13T03:12:19.576Z",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"Location",
+												"RetrieveVehiclePositionByDate"
+											],
+											"query": [
+												{
+													"key": "VehicleId",
+													"value": "-89638050"
+												},
+												{
+													"key": "FromDate",
+													"value": "1981-04-13T03:12:19.576Z"
+												},
+												{
+													"key": "ToDate",
+													"value": "1981-04-13T03:12:19.576Z"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n \"success\": false,\n \"message\": \"sunt anim aute\",\n \"validationErrors\": [\n  \"ullamco ex dolore mollit\",\n  \"sit velit\"\n ],\n \"vehiclePosition\": [\n  {\n   \"locationId\": -92679841,\n   \"latitude\": 63950814.1673027,\n   \"longitude\": -24291881.024095386,\n   \"altitude\": -47606484.49089917,\n   \"createdDate\": \"1989-01-10T11:45:53.558Z\",\n   \"vehicleId\": -66563492,\n   \"locality\": \"irure quis non pariatur ex\"\n  },\n  {\n   \"locationId\": 79715504,\n   \"latitude\": 34190116.09702656,\n   \"longitude\": -86493246.27266468,\n   \"altitude\": -88115006.42354786,\n   \"createdDate\": \"1959-10-29T07:52:45.541Z\",\n   \"vehicleId\": -24107308,\n   \"locality\": \"deserunt non eu\"\n  }\n ]\n}"
+								},
+								{
+									"name": "Error",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: apikey",
+												"key": "Authorization",
+												"value": "<API Key>"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/api/Location/RetrieveVehiclePositionByDate?VehicleId=-89638050&FromDate=1981-04-13T03:12:19.576Z&ToDate=1981-04-13T03:12:19.576Z",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"Location",
+												"RetrieveVehiclePositionByDate"
+											],
+											"query": [
+												{
+													"key": "VehicleId",
+													"value": "-89638050"
+												},
+												{
+													"key": "FromDate",
+													"value": "1981-04-13T03:12:19.576Z"
+												},
+												{
+													"key": "ToDate",
+													"value": "1981-04-13T03:12:19.576Z"
+												}
+											]
+										}
+									},
+									"status": "Internal Server Error",
+									"code": 500,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n \"type\": \"sint consequat dolor voluptate amet\",\n \"title\": \"irure est eiu\",\n \"status\": 87827901,\n \"detail\": \"ut nostrud \",\n \"instance\": \"consequat in id\"\n}"
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "Vehicle",
+					"item": [
+						{
+							"name": "Register Vehicle",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"let jsonData = JSON.parse(responseBody);\r",
+											"pm.environment.set(\"VehicleId\", jsonData.vehicle.vehicleId);\r",
+											"pm.environment.set(\"UserId\", jsonData.vehicle.userId);\r",
+											"\r",
+											""
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"vehicleName\": \"Lamborghini\",\n    \"maker\": \"sunt amet\",\n    \"model\": \"new\",\n    \"year\": \"2021\",\n    \"bodyType\": \"red\",\n    \"name\": \"seven peek\",\n    \"userName\": \"aung45\",\n    \"password\": \"P@55w0rdaung64\",\n    \"email\": \"addd12rrr@gma6il.com4\",\n    \"imei\": \"5a233d82-e603-9808-3a74-edb128b1a8f6\",\n    \"trackingDeviceName\": \"seven peek GPS Tracker\",\n    \"status\": 1\n}"
+								},
+								"url": {
+									"raw": "{{baseUrl}}/api/Vehicle/RegisterVehicle",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"Vehicle",
+										"RegisterVehicle"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Success",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: apikey",
+												"key": "Authorization",
+												"value": "<API Key>"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"vehicleId\": 46998761,\n    \"vehicleName\": \"consequat enim\",\n    \"maker\": \"sunt amet\",\n    \"model\": \"qui amet tempor mollit\",\n    \"year\": \"velit occaecat\",\n    \"bodyType\": \"magna pa\",\n    \"name\": \"mollit qui dolor id\",\n    \"userName\": \"dolor non\",\n    \"password\": \"ad eiusmod commodo\",\n    \"email\": \"nulla dolore quis proident in\",\n    \"imei\": \"urn:uuid:5a233d82-e603-9808-3a7d-edb128b1a8f8\",\n    \"trackingDeviceName\": \"sed dolore tempor\",\n    \"status\": 0\n}"
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/Vehicle/RegisterVehicle",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"Vehicle",
+												"RegisterVehicle"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n \"success\": true,\n \"message\": \"cillum Lorem esse nostrud\",\n \"validationErrors\": [\n  \"ipsum commodo tempor nostrud\",\n  \"minim dol\"\n ],\n \"vehicle\": {\n  \"vehicleId\": -57618977,\n  \"name\": \"commodo ut\"\n }\n}"
+								}
+							]
+						},
+						{
+							"name": "Get All Vehicles With Devices",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/api/Vehicle/GetAllVehiclesWithDevices?page=1&size=12",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"Vehicle",
+										"GetAllVehiclesWithDevices"
+									],
+									"query": [
+										{
+											"key": "page",
+											"value": "1"
+										},
+										{
+											"key": "size",
+											"value": "12"
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Success",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: apikey",
+												"key": "Authorization",
+												"value": "<API Key>"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/api/Vehicle/GetAllVehiclesWithDevices?page=-89638050&size=-89638050",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"Vehicle",
+												"GetAllVehiclesWithDevices"
+											],
+											"query": [
+												{
+													"key": "page",
+													"value": "-89638050"
+												},
+												{
+													"key": "size",
+													"value": "-89638050"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n \"success\": false,\n \"message\": \"est minim\",\n \"validationErrors\": [\n  \"officia do\",\n  \"eu qui reprehenderit id\"\n ],\n \"count\": 98340288,\n \"page\": 42358477,\n \"size\": -66188897,\n \"vehicles\": [\n  {\n   \"id\": -74854864,\n   \"vehicleType\": 0,\n   \"name\": \"sed sint\",\n   \"maker\": \"Ut in ex sed\",\n   \"model\": \"culpa cupidatat\",\n   \"year\": \"dolor incididunt quis\",\n   \"bodyType\": \"minim dolore laboris labore\",\n   \"trackingDeviceId\": 28695477,\n   \"trackingDevice\": {\n    \"trackingDeviceId\": -45345846,\n    \"imei\": \"urn:uuid:a1af1366-2e46-3487-15d2-f0ef7c682e57\",\n    \"name\": \"quis nostrud in\",\n    \"status\": true\n   },\n   \"userId\": \"pariatur\"\n  },\n  {\n   \"id\": 95635516,\n   \"vehicleType\": 1,\n   \"name\": \"sed in elit\",\n   \"maker\": \"adipisicing magna qui\",\n   \"model\": \"cupidatat consectetur in irure\",\n   \"year\": \"esse consectetur\",\n   \"bodyType\": \"nulla ut cupidatat\",\n   \"trackingDeviceId\": -86866118,\n   \"trackingDevice\": {\n    \"trackingDeviceId\": 67535001,\n    \"imei\": \"urn:uuid:a1ddfef6-1e2f-8df1-b390-50946dd14cb7\",\n    \"name\": \"dolor mollit Duis\",\n    \"status\": false\n   },\n   \"userId\": \"veniam ut\"\n  }\n ]\n}"
+								}
+							]
+						}
+					]
+				}
+			]
+		}
+	],
+	"auth": {
+		"type": "apikey",
+		"apikey": [
+			{
+				"key": "key",
+				"value": "Authorization",
+				"type": "string"
+			},
+			{
+				"key": "value",
+				"value": "<API Key>",
+				"type": "string"
+			},
+			{
+				"key": "in",
+				"value": "header",
+				"type": "string"
+			}
+		]
+	},
+	"variable": [
+		{
+			"key": "baseUrl",
+			"value": "/"
+		},
+		{
+			"key": "accessToken",
+			"value": ""
+		}
+	]
+}

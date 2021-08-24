@@ -8,6 +8,10 @@ using Microsoft.Extensions.Logging;
 using Serilog;
 using System;
 using System.Threading.Tasks;
+using Application.Contracts.Repositories;
+using Domain.Entities;
+using Microsoft.EntityFrameworkCore;
+using Persistence;
 
 namespace API
 {
@@ -33,9 +37,13 @@ namespace API
 
                 try
                 {
+                    var context = scope.ServiceProvider.GetService<VehicleTrackingSystemDbContext>();
+                    await context.Database.EnsureCreatedAsync();
                     var userManager = services.GetRequiredService<UserManager<ApplicationUser>>();
+                    var Vehicle = services.GetRequiredService<IRepository<Vehicle>>();
+                   
 
-                    await Infrastructure.Seed.UserCreator.SeedAsync(userManager);
+                    await Infrastructure.Seed.UserCreator.SeedAsync(userManager, Vehicle);
                     Log.Information("Application Starting");
                 }
                 catch (Exception ex)

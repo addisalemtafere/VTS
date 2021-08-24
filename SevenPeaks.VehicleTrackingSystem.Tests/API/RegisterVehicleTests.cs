@@ -39,7 +39,6 @@ namespace SevenPeaks.VehicleTrackingSystem.Tests.API
             var actionRresult = await _vehicleController.Create(new CreateVehicleCommand()
             {
                 Name = "vehicle-one",
-                DeviceId = 1,
             }) ;
 
             var result = actionRresult.Result as OkObjectResult;

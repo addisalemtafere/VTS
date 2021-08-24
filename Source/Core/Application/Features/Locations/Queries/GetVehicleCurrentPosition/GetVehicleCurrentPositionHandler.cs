@@ -2,7 +2,6 @@
 using Application.Contracts.Services.GoogleGeocodingService;
 using AutoMapper;
 using Domain.Entities;
-using GoogleMaps.LocationServices;
 using MediatR;
 using System.Collections.Generic;
 using System.Threading;

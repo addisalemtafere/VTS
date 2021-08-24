@@ -54,9 +54,6 @@ namespace Application.Features.Locations.Commands
                     Altitude = request.Altitude,
                     Latitude = request.Latitude,
                     Longitude = request.Longitude,
-                    Speed = request.Speed,
-                    HorizontalAccuracy = request.HorizontalAccuracy,
-                    VerticalAccuracy = request.VerticalAccuracy,
                     VehicleId = request.VehicleId
                 };
 

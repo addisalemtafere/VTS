@@ -27,15 +27,11 @@ namespace SevenPeaks.VehicleTrackingSystem.Tests.Validators
         [Fact]
         public void RequestCommandObjectShouldBeValid()
         {
-            var imeiNumber = Guid.NewGuid();
             var command = new CreateVehicleCommand() 
             {
             Name = "vehicle-one",
-            ImeiNumber = imeiNumber,
             };
-            _trackingDevicerepositoryMock.Setup(x => x.GetByImeiAsync(imeiNumber)).ReturnsAsync(new Domain.Entities.TrackingDevice());
             var result = _createVehicleCommandValidator.Validate(command);
-            _trackingDevicerepositoryMock.Verify(x => x.GetByImeiAsync(imeiNumber), Times.Once);
             result.IsValid.Should().BeTrue();
         }
     }
