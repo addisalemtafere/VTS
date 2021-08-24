@@ -14,7 +14,8 @@ namespace Application.Features.Locations.Queries.GetVehicleCurrentPosition
         {
             RuleFor(p => p.VehicleId)
                 .NotEmpty().WithMessage("{PropertyName} is required.")
-                .NotNull();
+                .NotNull()
+                .WithMessage("{PropertyName} is required.");
         }
     }
 }

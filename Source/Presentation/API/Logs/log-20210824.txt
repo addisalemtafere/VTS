@@ -793,3 +793,5 @@ Microsoft.Data.SqlClient.SqlException (0x80131904): Login failed for user 'sa'.
 ClientConnectionId:35733e50-0032-42a3-94f9-54c67ca72859
 Error Number:18456,State:1,Class:14
 2021-08-24 03:17:09.670 -04:00 [INF] Application Starting
+2021-08-24 03:30:53.348 -04:00 [INF] Application Starting
+2021-08-24 03:31:48.883 -04:00 [INF] Application Starting
