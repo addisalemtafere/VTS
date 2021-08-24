@@ -796,3 +796,11 @@ Error Number:18456,State:1,Class:14
 2021-08-24 03:30:53.348 -04:00 [INF] Application Starting
 2021-08-24 03:31:48.883 -04:00 [INF] Application Starting
 2021-08-24 04:00:57.361 -04:00 [INF] Application Starting
+2021-08-24 05:46:48.319 -04:00 [INF] Application Starting
+2021-08-24 06:03:30.791 -04:00 [INF] Application Starting
+2021-08-24 06:09:43.954 -04:00 [INF] Application Starting
+2021-08-24 06:11:55.116 -04:00 [INF] Application Starting
+2021-08-24 06:12:52.878 -04:00 [WRN] An error occured while starting the application
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at Infrastructure.Seed.SeedData.SeedAsync(UserManager`1 userManager, IRepository`1 repository, ILocationRepository locationRepository) in D:\projects\seven-peek\Final\SevenPeaks.VehicleTrackingSystem\Source\Infrastructure\Seed\SeedData.cs:line 32
+   at API.Program.Main(String[] args) in D:\projects\seven-peek\Final\SevenPeaks.VehicleTrackingSystem\Source\Presentation\API\Program.cs:line 46

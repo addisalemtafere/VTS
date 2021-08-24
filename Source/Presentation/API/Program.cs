@@ -41,9 +41,9 @@ namespace API
                     await context.Database.EnsureCreatedAsync();
                     var userManager = services.GetRequiredService<UserManager<ApplicationUser>>();
                     var Vehicle = services.GetRequiredService<IRepository<Vehicle>>();
-                   
+                    var locationRepository = services.GetRequiredService<ILocationRepository>();
 
-                    await Infrastructure.Seed.SeedData.SeedAsync(userManager, Vehicle);
+                    await Infrastructure.Seed.SeedData.SeedAsync(userManager, Vehicle, locationRepository);
                     Log.Information("Application Starting");
                 }
                 catch (Exception ex)

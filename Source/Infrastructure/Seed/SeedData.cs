@@ -10,7 +10,10 @@ namespace Infrastructure.Seed
 {
     public static class SeedData
     {
-        public static async Task SeedAsync(UserManager<ApplicationUser> userManager, IRepository<Vehicle> repository)
+        public static async Task SeedAsync(UserManager<ApplicationUser> userManager,
+            IRepository<Vehicle> repository,
+            ILocationRepository locationRepository
+            )
         {
             var applicationUser = new ApplicationUser
             {
@@ -22,8 +25,8 @@ namespace Infrastructure.Seed
 
             var user = await userManager.FindByEmailAsync(applicationUser.Email);
             if (user == null) await userManager.CreateAsync(applicationUser, "Plural&01?");
-            var checkIfExist = repository.ListAllAsync();
-            if (checkIfExist.Result.Count == 0)
+            var checkIfExist =await repository.ListAllAsync();
+            if (checkIfExist.Count == 0 && user!=null)
             {
 
                 var vehicle = new Vehicle()
@@ -39,6 +42,17 @@ namespace Infrastructure.Seed
                 };
                 vehicle.TrackingDevice = trackerRequest;
                 vehicle = await repository.AddAsync(vehicle);
+
+
+                var locationRequest = new Location()
+                {
+                    Altitude = 0,
+                    Latitude = 13.736717,
+                    Longitude = 100.523186,
+                    VehicleId = vehicle.Id
+                };
+
+                var location = await locationRepository.AddAsync(locationRequest);
             }
         }
     }
