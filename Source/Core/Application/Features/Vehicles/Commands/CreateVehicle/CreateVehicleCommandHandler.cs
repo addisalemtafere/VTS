@@ -67,13 +67,24 @@ namespace Application.Features.Vehicles.Commands.CreateVehicle
                 };
                 vehicle.TrackingDevice = trackerRequest;
                 vehicle = await _vehicleRepository.AddAsync(vehicle);
-
-                CreateVehicleDto vehicleRespose = new CreateVehicleDto
+                CreateVehicleDto vehicleRespose = null;
+                if (vehicle == null)
                 {
-                    Name = request.Name,
-                    UserId = user.UserId,
-                    VehicleId = vehicle.Id
-                };
+                    await _authenticationService.RemoveUserAsnc(request.Email);
+
+                }
+                else
+                {
+                    vehicleRespose = new CreateVehicleDto()
+                    {
+                        Name = request.Name,
+                        UserId = user.UserId,
+                        VehicleId = vehicle.Id
+                    };
+
+                }
+
+
 
                 createVehicleCommandResponse.Vehicle = vehicleRespose;
             }

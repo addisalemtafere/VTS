@@ -83,6 +83,18 @@ namespace Infrastructure.Services.Identity
             }
         }
 
+        public async Task<bool> RemoveUserAsnc(string email)
+        {
+            var user = await _userManager.FindByEmailAsync(email);
+
+            if (user == null) throw new Exception($"User with {email} not found.");
+
+            var result = await _userManager.DeleteAsync(user);
+            if (result.Succeeded) return true;
+            return false;
+
+        }
+
         private async Task<JwtSecurityToken> GenerateToken(ApplicationUser user)
         {
             var userClaims = await _userManager.GetClaimsAsync(user);
