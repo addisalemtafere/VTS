@@ -31,7 +31,8 @@ namespace SevenPeaks.VehicleTrackingSystem.Tests.API
         public async Task ShouldCreateLocation()
         {
 
-            _mediatorMock.Setup(x => x.Send(It.IsAny<CreateLocationCommand>(), It.IsAny<CancellationToken>())).ReturnsAsync(
+            _mediatorMock.Setup(x => x.Send(It.IsAny<CreateLocationCommand>(), 
+                It.IsAny<CancellationToken>())).ReturnsAsync(
                 new CreateLocationCommandResponse()
                 {
                   Location = new CreateLocationDto() { Id = 1}
@@ -43,7 +44,8 @@ namespace SevenPeaks.VehicleTrackingSystem.Tests.API
             });
 
             var result = actionResult.Result as OkObjectResult;
-            _mediatorMock.Verify(x => x.Send(It.IsAny<CreateLocationCommand>(), It.IsAny<CancellationToken>()), Times.Once);
+            _mediatorMock.Verify(x => x.Send(It.IsAny<CreateLocationCommand>(),
+                It.IsAny<CancellationToken>()), Times.Once);
             Assert.NotNull(result);
             
         }
@@ -67,7 +69,8 @@ namespace SevenPeaks.VehicleTrackingSystem.Tests.API
 
             var actionResult = await _locationController.GetVehicleCurrentPosition(1);
             var result = actionResult.Result as OkObjectResult;
-            _mediatorMock.Verify(x => x.Send(It.IsAny<GetVehicleCurrentPositionQuery>(), It.IsAny<CancellationToken>()), Times.Once);
+            _mediatorMock.Verify(x => x.Send(It.IsAny<GetVehicleCurrentPositionQuery>(), 
+                It.IsAny<CancellationToken>()), Times.Once);
             Assert.NotNull(result);
             var actualResult = result.Value as GetVehicleCurrentLocationQueryResponse;
             Assert.NotNull(actualResult);
