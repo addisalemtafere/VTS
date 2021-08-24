@@ -52,10 +52,10 @@ namespace Application.Features.Locations.Commands
             return isVehicleExist;
         }
 
-        private async Task<bool> CheckUserCanAddOrUpdateLocation(CreateLocationCommand request, CancellationToken token)
+        private Task<bool> CheckUserCanAddOrUpdateLocation(CreateLocationCommand request, CancellationToken token)
         {
             var isValidUser = request.UserId.ToString() == _loggedInUserService.UserId;
-            return isValidUser;
+            return Task.FromResult(isValidUser);
         }
     }
 }
