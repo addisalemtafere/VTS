@@ -792,3 +792,4 @@ Microsoft.Data.SqlClient.SqlException (0x80131904): Login failed for user 'sa'.
    at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
 ClientConnectionId:35733e50-0032-42a3-94f9-54c67ca72859
 Error Number:18456,State:1,Class:14
+2021-08-24 03:17:09.670 -04:00 [INF] Application Starting
