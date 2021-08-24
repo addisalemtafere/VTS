@@ -804,3 +804,6 @@ Error Number:18456,State:1,Class:14
 System.NullReferenceException: Object reference not set to an instance of an object.
    at Infrastructure.Seed.SeedData.SeedAsync(UserManager`1 userManager, IRepository`1 repository, ILocationRepository locationRepository) in D:\projects\seven-peek\Final\SevenPeaks.VehicleTrackingSystem\Source\Infrastructure\Seed\SeedData.cs:line 32
    at API.Program.Main(String[] args) in D:\projects\seven-peek\Final\SevenPeaks.VehicleTrackingSystem\Source\Presentation\API\Program.cs:line 46
+2021-08-24 06:15:21.586 -04:00 [INF] Application Starting
+2021-08-24 06:20:11.164 -04:00 [WRN] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results.
+2021-08-24 06:20:11.177 -04:00 [WRN] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results.
