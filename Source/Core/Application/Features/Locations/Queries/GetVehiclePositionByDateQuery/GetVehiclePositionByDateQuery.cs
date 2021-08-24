@@ -28,12 +28,12 @@ namespace Application.Features.Locations.Queries.GetVehiclePositionByDateQuery
                 .NotEmpty().WithMessage("{PropertyName} is required.")
                 .NotNull()
                 .WithMessage("{PropertyName} parameter is not allowed");
-          
-   
+
+
         }
 
 
 
-       
+
     }
 }

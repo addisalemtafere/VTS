@@ -19,7 +19,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Source\Common\Shared\Shared.csproj" />
     <ProjectReference Include="..\Source\Core\Application\Application.csproj" />
     <ProjectReference Include="..\Source\Core\Domain\Domain.csproj" />
     <ProjectReference Include="..\Source\Infrastructure\Infrastructure.csproj" />
