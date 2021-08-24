@@ -8,7 +8,7 @@ using Domain.Entities;
 
 namespace Infrastructure.Seed
 {
-    public static class UserCreator
+    public static class SeedData
     {
         public static async Task SeedAsync(UserManager<ApplicationUser> userManager, IRepository<Vehicle> repository)
         {

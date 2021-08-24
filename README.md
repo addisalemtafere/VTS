@@ -19,6 +19,12 @@ The project is orgainized with Clean architecture in mind, hence I have
 * **SQL Server database** connection and containerization
 * Using **Entity Framework Core for Commands ** and auto migrate to DB on application startup.
 * Using **Dapper for Queries **.
+#### PostMan Collection
+* First import environment **Vehicle tracking system.postman_environment.json**
+* Second import collection **VehicleTracking System API.postman_collection.json**
+#### Video
+* Check the attached video Under Docs
+
 #### Docker Compose  with all dependencies on docker;
 * Containerization of API,DB.
 * Containerization of databases
@@ -43,8 +49,11 @@ docker-compose -f docker-compose.yml -f docker-compose.override.yml up -d
 
 * **VTS API -> http://localhost:8000/swagger/index.html**
 * **SQL Server in Visual Studio Server Explorer-> localhost**   -- User Id => sa password => SwN12345678
-
-
+ 
+Option Two
+ * You can run directly from visual studio by selecting API
+* **VTS API -> https://localhost:5001/index.html**
+* **SQL Server in Visual Studio Server Explorer-> (localdb)\MSSQLLocalDB**   
 Thank you.
 
 

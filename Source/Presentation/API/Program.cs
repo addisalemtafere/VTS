@@ -43,7 +43,7 @@ namespace API
                     var Vehicle = services.GetRequiredService<IRepository<Vehicle>>();
                    
 
-                    await Infrastructure.Seed.UserCreator.SeedAsync(userManager, Vehicle);
+                    await Infrastructure.Seed.SeedData.SeedAsync(userManager, Vehicle);
                     Log.Information("Application Starting");
                 }
                 catch (Exception ex)
