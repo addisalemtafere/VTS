@@ -9,7 +9,7 @@ namespace Infrastructure.Services.GoogleGeocodingService
 {
     public class GeocodingService : IGeocodingService
     {
-        public GoogleSettings _googleSettings;
+        private readonly GoogleSettings _googleSettings;
 
         public GeocodingService(IOptions<GoogleSettings> googleSettings)
         {
@@ -23,13 +23,13 @@ namespace Infrastructure.Services.GoogleGeocodingService
                 await httpClient.GetAsync(
                     $"{_googleSettings.BaseUrl}?key={_googleSettings.ApiKey}&lat={lat}&lon={lang}&format=json");
             var contents = await response.Content.ReadAsStringAsync();
-            var result = JsonConvert.DeserializeObject<Locality>(contents).display_name;
+            var result = JsonConvert.DeserializeObject<Locality>(contents).Display_name;
             return result;
         }
     }
 
     public class Locality
     {
-        public string display_name { get; set; }
+        public string Display_name { get; set; }
     }
 }

@@ -27,7 +27,7 @@ namespace Persistence
         public DbSet<Location> Locations { get; set; }
         public DbSet<Vehicle> Vehicles { get; set; }
 
-        public override Task<int> SaveChangesAsync(CancellationToken cancelationToken = new())
+        public override Task<int> SaveChangesAsync(CancellationToken cancellationToken = new())
         {
             foreach (var entry in ChangeTracker.Entries<AuditableEntity>())
                 switch (entry.State)
@@ -44,7 +44,7 @@ namespace Persistence
                         break;
                 }
 
-            return base.SaveChangesAsync(cancelationToken);
+            return base.SaveChangesAsync(cancellationToken);
         }
 
         protected override void OnModelCreating(ModelBuilder builder)

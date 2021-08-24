@@ -33,11 +33,19 @@ namespace Infrastructure.Services.Identity
         {
             var user = await _userManager.FindByEmailAsync(request.Email);
 
-            if (user == null) throw new Exception($"User with {request.Email} not found.");
+            if (user == null)
+            {
+                var exception = new Exception($"User with {request.Email} not found.");
+                throw exception;
+            }
 
             var result = await _signInManager.PasswordSignInAsync(user.UserName, request.Password, false, false);
 
-            if (!result.Succeeded) throw new Exception($"Credentials for '{request.Email} aren't valid'.");
+            if (!result.Succeeded)
+            {
+                var exception = new Exception($"Credentials for '{request.Email} aren't valid'.");
+                throw exception;
+            }
 
             var jwtSecurityToken = await GenerateToken(user);
 
@@ -56,7 +64,11 @@ namespace Infrastructure.Services.Identity
         {
             var existingUser = await _userManager.FindByNameAsync(request.UserName);
 
-            if (existingUser != null) throw new Exception($"Username '{request.UserName}' already exists.");
+            if (existingUser != null)
+            {
+                var exception = new Exception($"Username '{request.UserName}' already exists.");
+                throw exception;
+            }
 
             var user = new ApplicationUser
             {
@@ -75,11 +87,15 @@ namespace Infrastructure.Services.Identity
                 if (result.Succeeded)
                     return new RegistrationResponse() { UserId = user.Id };
                 else
-                    throw new Exception($"{result.Errors}");
+                {
+                    var exception = new Exception($"{result.Errors}");
+                    throw exception;
+                }
             }
             else
             {
-                throw new Exception($"Email {request.Email} already exists.");
+                var exception  = new Exception($"Email {request.Email} already exists.");
+                throw exception;
             }
         }
 
@@ -87,7 +103,11 @@ namespace Infrastructure.Services.Identity
         {
             var user = await _userManager.FindByEmailAsync(email);
 
-            if (user == null) throw new Exception($"User with {email} not found.");
+            if (user == null)
+            {
+                var exception = new Exception($"User with {email} not found.");
+                throw exception;
+            }
 
             var result = await _userManager.DeleteAsync(user);
             if (result.Succeeded) return true;

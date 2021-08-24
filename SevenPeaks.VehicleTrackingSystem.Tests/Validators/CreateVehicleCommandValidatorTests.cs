@@ -2,7 +2,6 @@
 using Application.Features.Vehicles.Commands.CreateVehicle;
 using FluentAssertions;
 using Moq;
-using System;
 using Xunit;
 
 namespace SevenPeaks.VehicleTrackingSystem.Tests.Validators
